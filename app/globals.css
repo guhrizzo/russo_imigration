@@ -158,6 +158,47 @@ body {
   pointer-events: none;
 }
 
+/* Developer credit link */
+.dev-link {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: var(--gold-400);
+  transition: color 0.3s ease;
+}
+
+.dev-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-400), var(--gold-300), transparent);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dev-link::before {
+  content: '';
+  position: absolute;
+  inset: -2px -4px;
+  border-radius: 3px;
+  background: rgba(212, 168, 75, 0);
+  transition: background 0.3s ease;
+}
+
+.dev-link:hover {
+  color: var(--gold-300);
+}
+
+.dev-link:hover::after {
+  width: 100%;
+}
+
+.dev-link:hover::before {
+  background: rgba(212, 168, 75, 0.08);
+}
+
 /* Stagger animation delays */
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
