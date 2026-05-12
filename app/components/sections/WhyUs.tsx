@@ -2,39 +2,35 @@
 
 import { useEffect, useRef } from 'react'
 import { ShieldCheck, Users, Scale, Globe, Lock, Clock, Handshake, Heart } from 'lucide-react'
+import { useLanguage } from '@/app/i18n/LanguageContext'
 
-const mainFeatures = [
-  {
-    icon: <ShieldCheck size={32} />,
-    title: 'Experiência Comprovada',
-    description: 'Anos de atuação e centenas de casos de sucesso. Conhecemos cada detalhe do processo imigratório.',
-  },
-  {
-    icon: <Users size={32} />,
-    title: 'Atendimento Personalizado',
-    description: 'Cada caso é único. Nós ouvimos, entendemos e cuidamos de você com dedicação total.',
-  },
-  {
-    icon: <Scale size={32} />,
-    title: 'Estratégias Eficazes',
-    description: 'Análise detalhada e planos estratégicos desenvolvidos especificamente para o seu caso.',
-  },
-  {
-    icon: <Globe size={32} />,
-    title: 'Foco em Resultados',
-    description: 'Nosso compromisso é com o seu sucesso e tranquilidade em cada etapa da jornada.',
-  },
-]
+const mainIconMap: Record<number, React.ReactNode> = {
+  0: <ShieldCheck size={32} />,
+  1: <Users size={32} />,
+  2: <Scale size={32} />,
+  3: <Globe size={32} />,
+}
 
-const bottomFeatures = [
-  { icon: <Lock size={20} />, title: 'Confidencial', description: 'Suas informações estão sempre protegidas com total sigilo.' },
-  { icon: <Clock size={20} />, title: 'Eficiente', description: 'Agilidade e organização para o melhor caminho do seu caso.' },
-  { icon: <Handshake size={20} />, title: 'Confiável', description: 'Transparência e compromisso que geram confiança genuína.' },
-  { icon: <Heart size={20} />, title: 'Empático', description: 'Acolhimento e respeito em cada passo da sua jornada.' },
-]
+const bottomIconMap: Record<number, React.ReactNode> = {
+  0: <Lock size={20} />,
+  1: <Clock size={20} />,
+  2: <Handshake size={20} />,
+  3: <Heart size={20} />,
+}
 
 export default function WhyUs() {
+  const { t, tRaw } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
+
+  const mainFeatures = (tRaw('why_us.features') as unknown as any[]).map((feat: any, i: number) => ({
+    ...feat,
+    icon: mainIconMap[i]
+  }))
+
+  const bottomFeatures = (tRaw('why_us.bottom_features') as unknown as any[]).map((feat: any, i: number) => ({
+    ...feat,
+    icon: bottomIconMap[i]
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,19 +59,18 @@ export default function WhyUs() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="animate-on-scroll text-center mb-20">
-          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">Nossa Diferença</p>
+          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">{t('why_us.section_label')}</p>
           <h2 className="font-display text-4xl md:text-5xl text-white font-bold mb-6 heading-underline">
-            Por Que Escolher a Russo?
+            {t('why_us.title')}
           </h2>
           <p className="max-w-xl mx-auto text-white/60 leading-relaxed font-light">
-            Combinamos expertise jurídica, atendimento humanizado e estratégias eficazes para garantir
-            o melhor resultado no seu processo de imigração.
+            {t('why_us.description')}
           </p>
         </div>
 
         {/* Main 4 features */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {mainFeatures.map((feat, i) => (
+          {mainFeatures.map((feat: any, i: number) => (
             <div
               key={i}
               className="animate-on-scroll group text-center"
@@ -100,14 +95,14 @@ export default function WhyUs() {
           <div className="relative">
             <div className="gold-line" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-navy-800 px-6">
-              <span className="text-gold-400 text-xs tracking-[0.3em] uppercase">Estamos com Você em Cada Etapa</span>
+              <span className="text-gold-400 text-xs tracking-[0.3em] uppercase">{t('why_us.divider')}</span>
             </div>
           </div>
         </div>
 
         {/* Bottom 4 features */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {bottomFeatures.map((feat, i) => (
+          {bottomFeatures.map((feat: any, i: number) => (
             <div
               key={i}
               className="animate-on-scroll glass-card rounded-xl p-6 flex items-start gap-4 hover:border-gold-400/40 transition-colors group"

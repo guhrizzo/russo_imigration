@@ -2,27 +2,29 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
+import { useLanguage, type Language } from '@/app/i18n/LanguageContext'
 
 const WA_MESSAGE = encodeURIComponent('Olá! Gostaria de mais informações sobre os serviços de imigração.')
 
-const navLinks = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Por Que Nós', href: '#por-que-nos' },
-  { label: 'Depoimentos', href: '#depoimentos' },
-  { label: 'Contato', href: '#contato' },
-]
-
 const flags = [
-  { emoji: '🇧🇷', label: 'Português' },
-  { emoji: '🇺🇸', label: 'English' },
-  { emoji: '🇪🇸', label: 'Español' },
+  { emoji: '🇧🇷', lang: 'pt-br' as Language, label: 'Português' },
+  { emoji: '🇺🇸', lang: 'en' as Language, label: 'English' },
+  { emoji: '🇪🇸', lang: 'es' as Language, label: 'Español' },
 ]
 
 export default function Navbar() {
+  const { t, language, setLanguage } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const navLinks = [
+    { label: t('navbar.inicio'), href: '#inicio' },
+    { label: t('navbar.sobre'), href: '#sobre' },
+    { label: t('navbar.servicos'), href: '#servicos' },
+    { label: t('navbar.por_que_nos'), href: '#por-que-nos' },
+    { label: t('navbar.depoimentos'), href: '#depoimentos' },
+    { label: t('navbar.contato'), href: '#contato' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -62,10 +64,15 @@ export default function Navbar() {
           {/* Flag switcher */}
           <div className="flag-switcher">
             {flags.map((f) => (
-              <div key={f.label} className="flag-item">
+              <button
+                key={f.lang}
+                onClick={() => setLanguage(f.lang)}
+                className={`flag-item transition-opacity ${language === f.lang ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
+                aria-label={`Mudar para ${f.label}`}
+              >
                 <span className="flag-emoji">{f.emoji}</span>
                 <span className="flag-tooltip">{f.label}</span>
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -74,7 +81,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <a href="tel:+16893510277" className="nav-phone flex items-center gap-2 text-sm">
             <Phone size={14} />
-            <span>+1 (689) 351-0277</span>
+            <span>{t('navbar.phone')}</span>
           </a>
           <a
              href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
@@ -82,7 +89,7 @@ export default function Navbar() {
              rel="noopener noreferrer"
              className="btn-gold px-5 py-2 rounded-full text-sm"
            >
-             Fale Conosco
+             {t('navbar.speak_with_us')}
            </a>
         </div>
 
@@ -114,10 +121,15 @@ export default function Navbar() {
             {/* Flags mobile */}
             <div className="flag-switcher-mobile">
               {flags.map((f) => (
-                <div key={f.label} className="flag-item-mobile">
+                <button
+                  key={f.lang}
+                  onClick={() => setLanguage(f.lang)}
+                  className={`flag-item-mobile transition-opacity ${language === f.lang ? 'opacity-100' : 'opacity-60'}`}
+                  aria-label={`Mudar para ${f.label}`}
+                >
                   <span className="flag-emoji-mobile">{f.emoji}</span>
                   <span className="flag-label-mobile">{f.label}</span>
-                </div>
+                </button>
               ))}
             </div>
 
@@ -127,7 +139,7 @@ export default function Navbar() {
                rel="noopener noreferrer"
                className="btn-gold px-5 py-3 rounded-full text-sm text-center mt-2"
              >
-               Fale Conosco pelo WhatsApp
+               {t('navbar.speak_with_us_whatsapp')}
              </a>
           </nav>
         </div>

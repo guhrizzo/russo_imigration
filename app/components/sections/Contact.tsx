@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { useLanguage } from '@/app/i18n/LanguageContext'
 
 const WA_MESSAGE = encodeURIComponent('Olá! Gostaria de mais informações sobre os serviços de imigração.')
 
 export default function Contact() {
+  const { t } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
@@ -30,19 +32,24 @@ export default function Contact() {
     setSubmitted(true)
   }
 
+  const contactItems = [
+    { icon: <Phone size={16} />, label: t('contact.phone_label'), value: t('contact.phone_value') },
+    { icon: <Mail size={16} />, label: t('contact.email_label'), value: t('contact.email_value') },
+    { icon: <MapPin size={16} />, label: t('contact.location_label'), value: t('contact.location_value') },
+  ]
+
   return (
     <section id="contato" ref={sectionRef} className="relative py-28 overflow-hidden">
       <div className="absolute inset-0 bg-navy-900" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="animate-on-scroll text-center mb-20">
-          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">Entre em Contato</p>
+          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">{t('contact.section_label')}</p>
           <h2 className="font-display text-4xl md:text-5xl text-white font-bold mb-6 heading-underline">
-            Inicie Sua Jornada Hoje
+            {t('contact.title')}
           </h2>
           <p className="max-w-xl mx-auto text-white/60 leading-relaxed font-light">
-            Preencha o formulário abaixo ou fale diretamente com nossa equipe pelo WhatsApp.
-            Um especialista entrará em contato em breve.
+            {t('contact.description')}
           </p>
         </div>
 
@@ -68,8 +75,8 @@ export default function Contact() {
                 </svg>
               </div>
 
-              <h3 className="font-display text-xl text-white font-semibold mb-2">Fale Conosco Hoje Mesmo!</h3>
-              <p className="text-white/55 text-sm mb-5">Descubra como podemos ajudar você a construir um novo futuro.</p>
+              <h3 className="font-display text-xl text-white font-semibold mb-2">{t('contact.whatsapp_title')}</h3>
+              <p className="text-white/55 text-sm mb-5">{t('contact.whatsapp_description')}</p>
 
                <a
                   href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
@@ -77,17 +84,13 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold w-full justify-center"
                 >
-                 Iniciar Conversa no WhatsApp
+                 {t('contact.whatsapp_button')}
                </a>
             </div>
 
             {/* Contact details */}
             <div className="glass-card rounded-2xl p-6 space-y-4">
-              {[
-                 { icon: <Phone size={16} />, label: 'Telefone', value: '+1 (689) 351-0277' },
-                { icon: <Mail size={16} />, label: 'Email', value: 'contato@russoimmigration.com' },
-                { icon: <MapPin size={16} />, label: 'Localização', value: 'Estados Unidos' },
-              ].map((item, i) => (
+              {contactItems.map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="icon-circle shrink-0 text-gold-400" style={{ width: 36, height: 36 }}>
                     {item.icon}
@@ -112,14 +115,14 @@ export default function Contact() {
                       <polyline points="20 6 9 17 4 12" strokeWidth="2.5" stroke="#050D1F" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <h3 className="font-display text-2xl text-white font-semibold mb-2">Mensagem Enviada!</h3>
-                  <p className="text-white/60">Em breve nossa equipe entrará em contato com você.</p>
+                  <h3 className="font-display text-2xl text-white font-semibold mb-2">{t('contact.form_success_title')}</h3>
+                  <p className="text-white/60">{t('contact.form_success_description')}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-white/50 text-xs uppercase tracking-widest mb-2">Nome</label>
+                      <label className="block text-white/50 text-xs uppercase tracking-widest mb-2">{t('contact.form_name_label')}</label>
                       <input
                         type="text"
                         required
@@ -129,11 +132,11 @@ export default function Contact() {
                         style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
                         onFocus={(e) => e.target.style.borderColor = 'rgba(212,168,75,0.5)'}
                         onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-                        placeholder="Seu nome completo"
+                        placeholder={t('contact.form_name_placeholder')}
                       />
                     </div>
                     <div>
-                      <label className="block text-white/50 text-xs uppercase tracking-widest mb-2">Telefone</label>
+                      <label className="block text-white/50 text-xs uppercase tracking-widest mb-2">{t('contact.form_phone_label')}</label>
                       <input
                         type="tel"
                         value={form.phone}
@@ -142,13 +145,13 @@ export default function Contact() {
                         style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
                         onFocus={(e) => e.target.style.borderColor = 'rgba(212,168,75,0.5)'}
                         onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-                        placeholder="+1 (000) 000-0000"
+                        placeholder={t('contact.form_phone_placeholder')}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-white/50 text-xs uppercase tracking-widest mb-2">Email</label>
+                    <label className="block text-white/50 text-xs uppercase tracking-widest mb-2">{t('contact.form_email_label')}</label>
                     <input
                       type="email"
                       required
@@ -158,12 +161,12 @@ export default function Contact() {
                       style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
                       onFocus={(e) => e.target.style.borderColor = 'rgba(212,168,75,0.5)'}
                       onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-                      placeholder="seuemail@exemplo.com"
+                      placeholder={t('contact.form_email_placeholder')}
                     />
                   </div>
 
                   <div>
-                    <label className="block text-white/50 text-xs uppercase tracking-widest mb-2">Mensagem</label>
+                    <label className="block text-white/50 text-xs uppercase tracking-widest mb-2">{t('contact.form_message_label')}</label>
                     <textarea
                       required
                       rows={5}
@@ -173,7 +176,7 @@ export default function Contact() {
                       style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
                       onFocus={(e) => e.target.style.borderColor = 'rgba(212,168,75,0.5)'}
                       onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.1)'}
-                      placeholder="Conte um pouco sobre seu caso..."
+                      placeholder={t('contact.form_message_placeholder')}
                     />
                   </div>
 
@@ -182,11 +185,11 @@ export default function Contact() {
                     className="btn-gold w-full py-4 rounded-xl font-semibold flex items-center justify-center gap-2 text-sm"
                   >
                     <Send size={16} />
-                    Enviar Mensagem
+                    {t('contact.form_submit')}
                   </button>
 
                   <p className="text-white/30 text-xs text-center">
-                    Suas informações são tratadas com total confidencialidade.
+                    {t('contact.form_confidentiality')}
                   </p>
                 </form>
               )}

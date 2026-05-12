@@ -2,54 +2,17 @@
 
 import { useEffect, useRef } from 'react'
 import { Star, Quote } from 'lucide-react'
-
-const testimonials = [
-  {
-    name: 'Carlos Mendes',
-    origin: 'Miami, Florida',
-    initials: 'CM',
-    stars: 5,
-    text: 'A equipe da Russo Immigration foi incrível! Me guiaram em cada passo do processo de asilo com total profissionalismo e empatia. Hoje estou legalizado e com uma nova vida nos EUA.',
-  },
-  {
-    name: 'Ana Paula Santos',
-    origin: 'New York, New York',
-    initials: 'AS',
-    stars: 5,
-    text: 'Tinha muito medo do processo, mas a Russo me deu segurança desde o início. Documentação, audiência, tudo acompanhado de perto. Resultado: aprovado! Sou muito grata.',
-  },
-  {
-    name: 'Roberto Ferreira',
-    origin: 'Los Angeles, California',
-    initials: 'RF',
-    stars: 5,
-    text: 'Profissionalismo e atenção acima de tudo. Foram transparentes em tudo, nunca me deixaram sem informação. O processo demorou, mas eles estiveram presentes do início ao fim.',
-  },
-  {
-    name: 'Juliana Costa',
-    origin: 'Chicago, Illinois',
-    initials: 'JC',
-    stars: 5,
-    text: 'Recomendo de olhos fechados! A Russo entendeu minha situação, criou uma estratégia personalizada e o resultado foi positivo. Atendimento humano e eficiente como esperava.',
-  },
-  {
-    name: 'Marcos Lima',
-    origin: 'Houston, Texas',
-    initials: 'ML',
-    stars: 5,
-    text: 'Confiei na Russo depois de pesquisar muito. Melhor decisão que tomei. Equipe séria, rápida e que realmente se importa com o cliente. Processo concluído com sucesso!',
-  },
-  {
-    name: 'Fernanda Oliveira',
-    origin: 'Orlando, Florida',
-    initials: 'FO',
-    stars: 5,
-    text: 'Excelente assessoria! Me senti segura e amparada durante todo o processo. A Russo transformou um momento de angústia em esperança real. Hoje tenho meu status legal nos EUA.',
-  },
-]
+import { useLanguage } from '@/app/i18n/LanguageContext'
 
 export default function Testimonials() {
+  const { t, tRaw } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
+
+  const testimonials = (tRaw('testimonials.testimonials') as unknown as any[]).map((testimonial: any) => ({
+    ...testimonial,
+    stars: 5,
+    initials: testimonial.name.split(' ').map((n: string) => n[0]).join(''),
+  }))
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -75,17 +38,17 @@ export default function Testimonials() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="animate-on-scroll text-center mb-20">
-          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">Histórias Reais</p>
+          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">{t('testimonials.section_label')}</p>
           <h2 className="font-display text-4xl md:text-5xl text-white font-bold mb-6 heading-underline">
-            O Que Nossos Clientes Dizem
+            {t('testimonials.title')}
           </h2>
           <p className="max-w-xl mx-auto text-white/60 leading-relaxed font-light">
-            Centenas de famílias já realizaram o sonho de uma vida legal nos EUA com a Russo Immigration.
+            {t('testimonials.description')}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
+          {testimonials.map((t_item: any, i: number) => (
             <div
               key={i}
               className="animate-on-scroll glass-card rounded-2xl p-7 hover:border-gold-400/30 transition-colors relative"
@@ -97,13 +60,13 @@ export default function Testimonials() {
 
               {/* Stars */}
               <div className="flex gap-1 mb-5">
-                {Array.from({ length: t.stars }).map((_, j) => (
+                {Array.from({ length: t_item.stars }).map((_: any, j: number) => (
                   <Star key={j} size={14} className="text-gold-400 fill-current" />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="text-white/65 text-sm leading-relaxed mb-6 italic">"{t.text}"</p>
+              <p className="text-white/65 text-sm leading-relaxed mb-6 italic">"{t_item.text}"</p>
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-white/5">
@@ -111,11 +74,11 @@ export default function Testimonials() {
                   className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-navy-950 shrink-0"
                   style={{ background: 'linear-gradient(135deg, #D4A84B, #F0D080)' }}
                 >
-                  {t.initials}
+                  {t_item.initials}
                 </div>
                 <div>
-                  <div className="text-white text-sm font-semibold">{t.name}</div>
-                  <div className="text-white/40 text-xs">{t.origin}</div>
+                  <div className="text-white text-sm font-semibold">{t_item.name}</div>
+                  <div className="text-white/40 text-xs">{t_item.origin}</div>
                 </div>
               </div>
             </div>

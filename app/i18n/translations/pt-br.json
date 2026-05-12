@@ -1,0 +1,250 @@
+{
+  "navbar": {
+    "inicio": "Início",
+    "sobre": "Sobre",
+    "servicos": "Serviços",
+    "por_que_nos": "Por Que Nós",
+    "depoimentos": "Depoimentos",
+    "contato": "Contato",
+    "phone": "+1 (689) 351-0277",
+    "speak_with_us": "Fale Conosco",
+    "speak_with_us_whatsapp": "Fale Conosco pelo WhatsApp",
+    "portuguese": "Português",
+    "english": "English",
+    "spanish": "Español"
+  },
+  "hero": {
+    "tagline": "Novos Começos. Futuros Extraordinários.",
+    "title": "Sua Vida Legal",
+    "title_highlight": "nos Estados Unidos",
+    "description": "Assessoria especializada em imigração. Atendimento personalizado para o seu processo de asilo, visto e legalização. Estamos com você em cada etapa da jornada.",
+    "contact_now": "Fale Conosco Agora",
+    "learn_story": "Conheça Nossa História",
+    "success_cases": "Casos de Sucesso",
+    "total_confidentiality": "Sigilo Garantido",
+    "client_rating": "Avaliação dos Clientes"
+  },
+  "about": {
+    "section_label": "Quem Somos",
+    "title": "Russo Immigration",
+    "description": "Somos especialistas em assessoria de imigração, comprometidos em transformar o seu sonho de viver legalmente nos Estados Unidos em realidade. Com atendimento humanizado e estratégico, estamos ao seu lado em cada etapa.",
+    "partner_title": "Seu Parceiro na Jornada para os EUA",
+    "text1": "A Russo Immigration nasceu da missão de ser o elo entre pessoas que buscam uma nova vida e as oportunidades que os Estados Unidos oferecem. Nossa equipe é formada por profissionais que conhecem profundamente os desafios do processo imigratório.",
+    "text2": "Cada caso é tratado com atenção única. Ouvimos sua história, entendemos sua situação e desenhamos a estratégia mais eficaz para o seu processo — seja ele de asilo, visto ou regularização.",
+    "text3": "Do primeiro contato à conclusão, você conta com suporte contínuo, total transparência e o compromisso de uma equipe que se dedica ao seu sucesso.",
+    "tags": ["Confidencial", "Eficiente", "Confiável", "Empático"],
+    "transformed_lives": "Vidas Transformadas",
+    "mission": "Nossa Missão",
+    "mission_text": "Criar caminhos e realizar sonhos. Orientamos cada pessoa com dedicação, entendendo que cada história é única. Construímos soluções personalizadas para transformar vidas.",
+    "vision": "Nossa Visão",
+    "vision_text": "Impactar centenas de vidas, ajudando pessoas a alcançar seus sonhos e viver novas oportunidades nos Estados Unidos com segurança e tranquilidade.",
+    "values": "Nossos Valores",
+    "values_text": "Empatia, comprometimento, ética e transparência. Somos parceiros em cada etapa, do primeiro contato até a conclusão do seu processo, com integridade total."
+  },
+  "services": {
+    "section_label": "O Que Fazemos",
+    "title": "Nossos Serviços",
+    "description": "Oferecemos assessoria completa em imigração, com estratégias eficazes e atendimento humanizado para cada etapa da sua jornada.",
+    "services": [
+      {
+        "title": "Taxa Anual de Asilo",
+        "badge": "Destaque",
+        "description": "Assessoria completa para o processo de asilo nos EUA. Cuidamos de toda a documentação, prazos e estratégias para maximizar suas chances de aprovação.",
+        "features": ["Análise do caso", "Preparação de documentos", "Acompanhamento de audiências", "Suporte contínuo"]
+      },
+      {
+        "title": "Defesa em Imigração",
+        "badge": null,
+        "description": "Representação estratégica para processos de imigração, incluindo defesa contra deportação e regularização de status.",
+        "features": ["Defesa contra deportação", "Regularização de status", "Recursos administrativos"]
+      },
+      {
+        "title": "Vistos & Green Card",
+        "badge": null,
+        "description": "Orientação especializada para pedidos de vistos de trabalho, família e residência permanente nos Estados Unidos.",
+        "features": ["Visto de trabalho", "Reunificação familiar", "Residência permanente"]
+      },
+      {
+        "title": "Proteção & Sigilo",
+        "badge": null,
+        "description": "Todas as suas informações são tratadas com absoluta confidencialidade. Sua privacidade é nossa prioridade em cada etapa do processo.",
+        "features": ["100% confidencial", "Dados protegidos", "Comunicação segura"]
+      },
+      {
+        "title": "Agilidade & Eficiência",
+        "badge": null,
+        "description": "Processos organizados e equipe dedicada para que seu caso avance com a máxima agilidade dentro dos prazos legais.",
+        "features": ["Gestão de prazos", "Processo organizado", "Atualizações regulares"]
+      },
+      {
+        "title": "Atendimento Personalizado",
+        "badge": null,
+        "description": "Cada caso é único. Nossa equipe ouve, entende e cuida de você com empatia, desenvolvendo a melhor estratégia para a sua situação.",
+        "features": ["Consulta individual", "Estratégia personalizada", "Acompanhamento próximo"]
+      }
+    ],
+    "cta_label": "Pronto para começar?",
+    "cta_title": "Estamos com Você em Cada Etapa",
+    "cta_description": "Entre em contato hoje e descubra como podemos ajudar você a construir um novo futuro nos Estados Unidos.",
+    "cta_button": "Fale Conosco Hoje Mesmo"
+  },
+  "why_us": {
+    "section_label": "Nossa Diferença",
+    "title": "Por Que Escolher a Russo?",
+    "description": "Combinamos expertise jurídica, atendimento humanizado e estratégias eficazes para garantir o melhor resultado no seu processo de imigração.",
+    "features": [
+      {
+        "title": "Experiência Comprovada",
+        "description": "Anos de atuação e centenas de casos de sucesso. Conhecemos cada detalhe do processo imigratório."
+      },
+      {
+        "title": "Atendimento Personalizado",
+        "description": "Cada caso é único. Nós ouvimos, entendemos e cuidamos de você com dedicação total."
+      },
+      {
+        "title": "Estratégias Eficazes",
+        "description": "Análise detalhada e planos estratégicos desenvolvidos especificamente para o seu caso."
+      },
+      {
+        "title": "Foco em Resultados",
+        "description": "Nosso compromisso é com o seu sucesso e tranquilidade em cada etapa da jornada."
+      }
+    ],
+    "divider": "Estamos com Você em Cada Etapa",
+    "bottom_features": [
+      {
+        "title": "Confidencial",
+        "description": "Suas informações estão sempre protegidas com total sigilo."
+      },
+      {
+        "title": "Eficiente",
+        "description": "Agilidade e organização para o melhor caminho do seu caso."
+      },
+      {
+        "title": "Confiável",
+        "description": "Transparência e compromisso que geram confiança genuína."
+      },
+      {
+        "title": "Empático",
+        "description": "Acolhimento e respeito em cada passo da sua jornada."
+      }
+    ]
+  },
+  "testimonials": {
+    "section_label": "Histórias Reais",
+    "title": "O Que Nossos Clientes Dizem",
+    "description": "Centenas de famílias já realizaram o sonho de uma vida legal nos EUA com a Russo Immigration.",
+    "testimonials": [
+      {
+        "name": "Carlos Mendes",
+        "origin": "Miami, Florida",
+        "text": "A equipe da Russo Immigration foi incrível! Me guiaram em cada passo do processo de asilo com total profissionalismo e empatia. Hoje estou legalizado e com uma nova vida nos EUA."
+      },
+      {
+        "name": "Ana Paula Santos",
+        "origin": "New York, New York",
+        "text": "Tinha muito medo do processo, mas a Russo me deu segurança desde o início. Documentação, audiência, tudo acompanhado de perto. Resultado: aprovado! Sou muito grata."
+      },
+      {
+        "name": "Roberto Ferreira",
+        "origin": "Los Angeles, California",
+        "text": "Profissionalismo e atenção acima de tudo. Foram transparentes em tudo, nunca me deixaram sem informação. O processo demorou, mas eles estiveram presentes do início ao fim."
+      },
+      {
+        "name": "Juliana Costa",
+        "origin": "Chicago, Illinois",
+        "text": "Recomendo de olhos fechados! A Russo entendeu minha situação, criou uma estratégia personalizada e o resultado foi positivo. Atendimento humano e eficiente como esperava."
+      },
+      {
+        "name": "Marcos Lima",
+        "origin": "Houston, Texas",
+        "text": "Confiei na Russo depois de pesquisar muito. Melhor decisão que tomei. Equipe séria, rápida e que realmente se importa com o cliente. Processo concluído com sucesso!"
+      },
+      {
+        "name": "Fernanda Oliveira",
+        "origin": "Orlando, Florida",
+        "text": "Excelente assessoria! Me senti segura e amparada durante todo o processo. A Russo transformou um momento de angústia em esperança real. Hoje tenho meu status legal nos EUA."
+      }
+    ]
+  },
+  "contact": {
+    "section_label": "Entre em Contato",
+    "title": "Inicie Sua Jornada Hoje",
+    "description": "Preencha o formulário abaixo ou fale diretamente com nossa equipe pelo WhatsApp. Um especialista entrará em contato em breve.",
+    "whatsapp_title": "Fale Conosco Hoje Mesmo!",
+    "whatsapp_description": "Descubra como podemos ajudar você a construir um novo futuro.",
+    "whatsapp_button": "Iniciar Conversa no WhatsApp",
+    "phone_label": "Telefone",
+    "email_label": "Email",
+    "location_label": "Localização",
+    "phone_value": "+1 (689) 351-0277",
+    "email_value": "contato@russoimmigration.com",
+    "location_value": "Estados Unidos",
+    "form_name_label": "Nome",
+    "form_name_placeholder": "Seu nome completo",
+    "form_phone_label": "Telefone",
+    "form_phone_placeholder": "+1 (000) 000-0000",
+    "form_email_label": "Email",
+    "form_email_placeholder": "seuemail@exemplo.com",
+    "form_message_label": "Mensagem",
+    "form_message_placeholder": "Conte um pouco sobre seu caso...",
+    "form_submit": "Enviar Mensagem",
+    "form_confidentiality": "Suas informações são tratadas com total confidencialidade.",
+    "form_success_title": "Mensagem Enviada!",
+    "form_success_description": "Em breve nossa equipe entrará em contato com você."
+  },
+  "faq": {
+    "section_label": "Suporte Especializado",
+    "title": "Tire suas Dúvidas",
+    "description": "Tudo o que você precisa saber para iniciar sua jornada rumo aos Estados Unidos com segurança jurídica.",
+    "faqs": [
+      {
+        "question": "Quais tipos de visto vocês auxiliam a obter?",
+        "answer": "Assessoramos uma ampla variedade de vistos, incluindo pedidos de asilo, vistos de trabalho (H-1B, L-1, O-1), visto de investidor (EB-5), reagrupamento familiar (Green Card) e regularização de situações migratórias. Cada caso é analisado individualmente para identificar a melhor estratégia legal."
+      },
+      {
+        "question": "Qual é o tempo médio para regularizar minha situação?",
+        "answer": "O prazo varia significativamente conforme o tipo de processo. Pedidos de asilo podem ser concluídos em meses, enquanto Green Cards por vínculo familiar ou laboral costumam levar de 1 a 3 anos. Durante nossa consulta inicial, apresentamos uma estimativa realista para o seu caso específico."
+      },
+      {
+        "question": "Meus dados são tratados com confidencialidade?",
+        "answer": "Sim, 100%. Toda informação compartilhada conosco é protegida por rigorosos protocolos de privacidade. Nossos profissionais seguem um código de conduta ético e nunca divulgamos dados de clientes a terceiros. Sua segurança e tranquilidade são nossa prioridade."
+      },
+      {
+        "question": "Posso iniciar o processo mesmo estando no Brasil?",
+        "answer": "Sim. Atendemos clientes de qualquer localidade de forma totalmente remota. Realizamos consultas por videochamada, processamos documentos digitalmente e guiamos você em cada etapa antes mesmo de sua chegada aos Estados Unidos. O processo pode ser iniciado hoje mesmo."
+      },
+      {
+        "question": "Quais documentos são necessários para começar?",
+        "answer": "Os documentos básicos geralmente incluem passaporte válido, certidão de nascimento, comprovante de residência e, dependendo do tipo de processo, documentação profissional ou comprovantes de vínculos familiares. Em nossa primeira consulta, fornecemos uma lista detalhada e personalizada para o seu caso."
+      },
+      {
+        "question": "Como funciona o acompanhamento durante todo o processo?",
+        "answer": "Você terá um consultor dedicado disponível via WhatsApp, e-mail e videochamadas. Enviamos atualizações proativas a cada mudança de status, preparamos você para entrevistas com autoridades e revisamos toda a documentação antes de qualquer submissão. Nunca estará sozinho nessa jornada."
+      }
+    ],
+    "cta_not_found": "Sua dúvida não foi respondida?",
+    "cta_description": "Fale agora com um de nossos especialistas em imigração e receba orientação personalizada.",
+    "cta_button": "Falar com Especialista",
+    "available_now": "Disponível agora · Resposta em minutos"
+  },
+  "footer": {
+    "tagline": "Novos Começos. Futuros Extraordinários.",
+    "description": "Assessoria especializada em imigração nos EUA.",
+    "quote": "Estamos com você em cada etapa.",
+    "navigation": "Navegação",
+    "speak_with_us": "Fale Conosco",
+    "cta_description": "Pronto para dar o primeiro passo? Nossa equipe está disponível para orientar você.",
+    "whatsapp": "WhatsApp",
+    "copyright": "© {year} Russo Immigration llc. Todos os direitos reservados.",
+    "developed_by": "Desenvolvido por",
+    "nav_items": [
+      { "label": "Início", "href": "#inicio" },
+      { "label": "Sobre Nós", "href": "#sobre" },
+      { "label": "Serviços", "href": "#servicos" },
+      { "label": "Por Que Nós", "href": "#por-que-nos" },
+      { "label": "Depoimentos", "href": "#depoimentos" },
+      { "label": "Contato", "href": "#contato" }
+    ]
+  }
+}

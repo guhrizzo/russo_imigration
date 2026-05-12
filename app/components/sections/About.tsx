@@ -2,27 +2,29 @@
 
 import { useEffect, useRef } from 'react'
 import { Target, Eye, Heart } from 'lucide-react'
-
-const values = [
-  {
-    icon: <Target size={24} />,
-    title: 'Nossa Missão',
-    text: 'Criar caminhos e realizar sonhos. Orientamos cada pessoa com dedicação, entendendo que cada história é única. Construímos soluções personalizadas para transformar vidas.',
-  },
-  {
-    icon: <Eye size={24} />,
-    title: 'Nossa Visão',
-    text: 'Impactar centenas de vidas, ajudando pessoas a alcançar seus sonhos e viver novas oportunidades nos Estados Unidos com segurança e tranquilidade.',
-  },
-  {
-    icon: <Heart size={24} />,
-    title: 'Nossos Valores',
-    text: 'Empatia, comprometimento, ética e transparência. Somos parceiros em cada etapa, do primeiro contato até a conclusão do seu processo, com integridade total.',
-  },
-]
+import { useLanguage } from '@/app/i18n/LanguageContext'
 
 export default function About() {
+  const { t, tRaw } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
+
+  const values = [
+    {
+      icon: <Target size={24} />,
+      title: t('about.mission'),
+      text: t('about.mission_text'),
+    },
+    {
+      icon: <Eye size={24} />,
+      title: t('about.vision'),
+      text: t('about.vision_text'),
+    },
+    {
+      icon: <Heart size={24} />,
+      title: t('about.values'),
+      text: t('about.values_text'),
+    },
+  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -54,13 +56,12 @@ export default function About() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="animate-on-scroll text-center mb-20">
-          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">Quem Somos</p>
+          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">{t('about.section_label')}</p>
           <h2 className="font-display text-4xl md:text-5xl text-white font-bold mb-6 heading-underline">
-            Russo Immigration
+            {t('about.title')}
           </h2>
           <p className="max-w-2xl mx-auto text-white/60 text-lg leading-relaxed font-light">
-            Somos especialistas em assessoria de imigração, comprometidos em transformar o seu sonho de viver legalmente
-            nos Estados Unidos em realidade. Com atendimento humanizado e estratégico, estamos ao seu lado em cada etapa.
+            {t('about.description')}
           </p>
         </div>
 
@@ -81,7 +82,7 @@ export default function About() {
                 <div className="text-gold-400 text-xs tracking-[0.4em] mb-8">IMMIGRATION</div>
                 <div className="gold-line w-full mb-8" />
                 <p className="text-white/50 text-sm italic font-display">
-                  "Novos Começos.<br />Futuros Extraordinários."
+                  "{t('about.section_label')}<br />{t('hero.tagline')}"
                 </p>
               </div>
 
@@ -95,33 +96,29 @@ export default function About() {
             {/* Floating stats card */}
             <div className="absolute -bottom-6 -right-6 glass-card rounded-2xl p-5 border border-gold-400/20 shadow-2xl">
               <div className="text-3xl font-display font-bold text-gold-400 mb-1">500+</div>
-              <div className="text-white/60 text-sm">Vidas Transformadas</div>
+              <div className="text-white/60 text-sm">{t('about.transformed_lives')}</div>
             </div>
           </div>
 
           {/* Right: text */}
           <div className="animate-on-scroll">
             <h3 className="font-display text-3xl text-white font-semibold mb-6 heading-underline-left">
-              Seu Parceiro na Jornada para os EUA
+              {t('about.partner_title')}
             </h3>
             <div className="space-y-5 text-white/65 leading-relaxed">
               <p>
-                A Russo Immigration nasceu da missão de ser o elo entre pessoas que buscam uma nova vida e as oportunidades
-                que os Estados Unidos oferecem. Nossa equipe é formada por profissionais que conhecem profundamente
-                os desafios do processo imigratório.
+                {t('about.text1')}
               </p>
               <p>
-                Cada caso é tratado com atenção única. Ouvimos sua história, entendemos sua situação e desenhamos
-                a estratégia mais eficaz para o seu processo — seja ele de asilo, visto ou regularização.
+                {t('about.text2')}
               </p>
               <p>
-                Do primeiro contato à conclusão, você conta com suporte contínuo, total transparência e o compromisso
-                de uma equipe que se dedica ao seu sucesso.
+                {t('about.text3')}
               </p>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {['Confidencial', 'Eficiente', 'Confiável', 'Empático'].map((tag) => (
+              {(tRaw('about.tags') as unknown as string[])?.map((tag: string) => (
                 <span
                   key={tag}
                   className="px-4 py-2 rounded-full text-xs tracking-widest uppercase border border-gold-400/30 text-gold-400 font-medium"
