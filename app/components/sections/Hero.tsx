@@ -1,10 +1,12 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ChevronDown, Shield, Star, Users } from 'lucide-react'
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [videoReady, setVideoReady] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,40 +31,45 @@ export default function Hero() {
       ref={sectionRef}
       className="relative min-h-screen flex flex-col justify-center overflow-hidden"
     >
+      {/* Fundo sólido enquanto o vídeo não carrega — elimina o flash branco/preto */}
+      <div
+        className="absolute inset-0"
+        style={{ zIndex: 0, backgroundColor: '#050C1C' }}
+      />
+
       {/* ── VIDEO BACKGROUND ── */}
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
         poster="/usa_poster.jpg"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 0 }}
+        onLoadedData={() => setVideoReady(true)}
+        className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+        style={{
+          zIndex: 1,
+          opacity: videoReady ? 1 : 0,
+        }}
       >
         <source src="/usa_better_30fps.mp4" type="video/mp4" />
       </video>
 
-      {/* ── GRADIENT OVERLAYS sobre o vídeo ── */}
-
-      {/* Camada base escura para legibilidade */}
+      {/* ── GRADIENT OVERLAYS ── */}
       <div
         className="absolute inset-0"
         style={{
-          zIndex: 1,
+          zIndex: 2,
           background: 'linear-gradient(to bottom, rgba(5,12,28,0.72) 0%, rgba(5,12,28,0.55) 50%, rgba(5,12,28,0.80) 100%)',
         }}
       />
-
-      {/* Gradiente azul-marinho lateral esquerdo */}
       <div
         className="absolute inset-0"
         style={{
-          zIndex: 1,
+          zIndex: 2,
           background: 'linear-gradient(to right, rgba(10,22,50,0.6) 0%, transparent 60%)',
         }}
       />
-
-      {/* Brilho dourado top-center */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full"
         style={{
@@ -71,14 +78,14 @@ export default function Hero() {
         }}
       />
 
-      {/* ── DECORAÇÕES (arcos dourados) ── */}
-      <div className="absolute top-0 left-0 w-64 h-64 pointer-events-none" style={{ zIndex: 2 }}>
+      {/* ── DECORAÇÕES ── */}
+      <div className="absolute top-0 left-0 w-64 h-64 pointer-events-none" style={{ zIndex: 3 }}>
         <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0 Q130 0 260 130" stroke="rgba(212,168,75,0.35)" strokeWidth="1.5" fill="none" />
           <path d="M0 0 Q90 0 180 90" stroke="rgba(212,168,75,0.18)" strokeWidth="1" fill="none" />
         </svg>
       </div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none rotate-180" style={{ zIndex: 2 }}>
+      <div className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none rotate-180" style={{ zIndex: 3 }}>
         <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0 Q130 0 260 130" stroke="rgba(212,168,75,0.35)" strokeWidth="1.5" fill="none" />
           <path d="M0 0 Q90 0 180 90" stroke="rgba(212,168,75,0.18)" strokeWidth="1" fill="none" />
@@ -87,14 +94,12 @@ export default function Hero() {
 
       {/* ── CONTENT ── */}
       <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20 text-center" style={{ zIndex: 10 }}>
-        {/* Badge */}
         <div className="animate-on-scroll inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gold-400/30 bg-gold-400/5 text-gold-400 text-xs tracking-[0.2em] font-medium uppercase mb-10">
           <Star size={12} fill="currentColor" />
           Novos Começos. Futuros Extraordinários.
           <Star size={12} fill="currentColor" />
         </div>
 
-        {/* Main heading */}
         <h1 className="animate-on-scroll font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6">
           Sua Vida Legal<br />
           <span
@@ -105,13 +110,11 @@ export default function Hero() {
           </span>
         </h1>
 
-        {/* Subtitle */}
         <p className="animate-on-scroll max-w-2xl mx-auto text-white/65 text-lg md:text-xl leading-relaxed mb-12 font-light">
           Assessoria especializada em imigração. Atendimento personalizado para o seu processo de
           asilo, visto e legalização. Estamos com você em cada etapa da jornada.
         </p>
 
-        {/* CTA buttons */}
         <div className="animate-on-scroll flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a
             href="https://wa.me/16893510277"
@@ -132,7 +135,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats */}
         <div className="animate-on-scroll grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
           {[
             { icon: <Users size={18} />, value: '500+', label: 'Casos de Sucesso' },
@@ -159,7 +161,6 @@ export default function Hero() {
         <ChevronDown size={24} />
       </a>
 
-      {/* Bottom gold line */}
       <div className="absolute bottom-0 left-0 right-0 gold-line" style={{ zIndex: 10 }} />
     </section>
   )
