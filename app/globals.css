@@ -121,12 +121,16 @@ body {
 
 /* WhatsApp float button */
 .whatsapp-float {
-  animation: pulse-wpp 2s infinite;
+  animation: pulse-wpp 2.5s ease-in-out infinite;
 }
 
 @keyframes pulse-wpp {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% { 
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
 }
 
 /* Decorative corner gold arcs (as seen in the flyers) */

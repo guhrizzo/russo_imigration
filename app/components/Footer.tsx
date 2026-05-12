@@ -74,9 +74,12 @@ export default function Footer() {
           <p className="text-white/30 text-xs">
             © {year} Russo Immigration. Todos os direitos reservados.
           </p>
-          <p className="text-white/20 text-xs hover:text-gold-400 transition-colors">
-            Desenvolvido por <a href="https://www.instagram.com/xfassessoria/" target="_blank" rel="noopener noreferrer" className="text-gold-400">X FAMILY</a>.
-          </p>
+           <p className="text-white/20 text-xs">
+             Desenvolvido por <a href="https://www.instagram.com/xfassessoria/" target="_blank" rel="noopener noreferrer" className="text-gold-400 relative group font-semibold hover:text-gold-300 transition-colors">
+               X FAMILY
+               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400 group-hover:w-full transition-all duration-300"></span>
+             </a>.
+           </p>
         </div>
       </div>
     </footer>

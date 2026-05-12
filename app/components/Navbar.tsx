@@ -40,18 +40,19 @@ export default function Navbar() {
           </div>
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-white/70 hover:text-gold-400 transition-colors tracking-wide font-light"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+         {/* Desktop nav */}
+         <nav className="hidden lg:flex items-center gap-8">
+           {navLinks.map((link) => (
+             <a
+               key={link.href}
+               href={link.href}
+               className="text-sm text-white/70 hover:text-gold-400 transition-colors tracking-wide font-light relative group"
+             >
+               {link.label}
+               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold-400 transition-all duration-300 group-hover:w-full"></span>
+             </a>
+           ))}
+         </nav>
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-4">
@@ -86,16 +87,17 @@ export default function Navbar() {
       {menuOpen && (
         <div className="lg:hidden mt-3 mx-4 rounded-2xl glass-card p-6 animate-fade-in">
           <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-white/80 hover:text-gold-400 transition-colors py-2 border-b border-white/5 text-sm tracking-wide"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+             {navLinks.map((link) => (
+               <a
+                 key={link.href}
+                 href={link.href}
+                 className="text-white/80 hover:text-gold-400 transition-all py-2 border-b border-white/5 text-sm tracking-wide relative group"
+                 onClick={() => setMenuOpen(false)}
+               >
+                 {link.label}
+                 <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-gold-400 transition-all duration-300 group-hover:w-full"></span>
+               </a>
+             ))}
              <a
                href="https://wa.me/16893510277"
                target="_blank"
