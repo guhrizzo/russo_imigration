@@ -7,6 +7,7 @@ import Testimonials from './components/sections/Testimonials'
 import Contact from './components/sections/Contact'
 import Footer from './components/Footer'
 import WhatsAppFloat from './components/WhatsAppFloat'
+import Faq from "./components/sections/Faq"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <WhyUs />
       <Testimonials />
       <Contact />
+      <Faq/>
       <Footer />
       <WhatsAppFloat />
     </main>

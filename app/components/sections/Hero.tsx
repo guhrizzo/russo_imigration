@@ -35,6 +35,7 @@ export default function Hero() {
         muted
         loop
         playsInline
+        poster="/usa_poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ zIndex: 0 }}
       >
