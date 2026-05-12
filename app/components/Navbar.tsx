@@ -12,6 +12,12 @@ const navLinks = [
   { label: 'Contato', href: '#contato' },
 ]
 
+const flags = [
+  { emoji: '🇧🇷', label: 'Português' },
+  { emoji: '🇺🇸', label: 'English' },
+  { emoji: '🇪🇸', label: 'Español' },
+]
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -41,14 +47,26 @@ export default function Navbar() {
           </div>
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link">
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        {/* Desktop nav + flags */}
+        <div className="hidden lg:flex items-center gap-10">
+          <nav className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className="nav-link">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Flag switcher */}
+          <div className="flag-switcher">
+            {flags.map((f) => (
+              <div key={f.label} className="flag-item">
+                <span className="flag-emoji">{f.emoji}</span>
+                <span className="flag-tooltip">{f.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-4">
@@ -90,11 +108,22 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+
+            {/* Flags mobile */}
+            <div className="flag-switcher-mobile">
+              {flags.map((f) => (
+                <div key={f.label} className="flag-item-mobile">
+                  <span className="flag-emoji-mobile">{f.emoji}</span>
+                  <span className="flag-label-mobile">{f.label}</span>
+                </div>
+              ))}
+            </div>
+
             <a
               href="https://wa.me/16893510277"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold px-5 py-3 rounded-full text-sm text-center mt-4"
+              className="btn-gold px-5 py-3 rounded-full text-sm text-center mt-2"
             >
               Fale Conosco pelo WhatsApp
             </a>

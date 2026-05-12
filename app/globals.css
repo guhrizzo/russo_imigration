@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 
+/* ── VARIÁVEIS ── */
 :root {
   --navy-950: #050D1F;
   --navy-900: #0A1628;
@@ -11,6 +12,7 @@
   --gold-600: #A67A28;
 }
 
+/* ── BASE ── */
 * {
   scroll-behavior: smooth;
 }
@@ -22,20 +24,18 @@ body {
   overflow-x: hidden;
 }
 
-/* Gold divider line */
+/* ── UTILITÁRIOS ── */
 .gold-line {
   background: linear-gradient(90deg, transparent, #D4A84B, transparent);
   height: 1px;
 }
 
-/* Diagonal navy curve decoration */
 .curve-decoration {
   position: absolute;
   border-radius: 50%;
   border: 1px solid rgba(212, 168, 75, 0.15);
 }
 
-/* Animated underline for headings */
 .heading-underline::after {
   content: '';
   display: block;
@@ -54,14 +54,24 @@ body {
   margin: 12px 0 0;
 }
 
-/* Glass card */
 .glass-card {
   background: rgba(14, 30, 53, 0.6);
   border: 1px solid rgba(212, 168, 75, 0.2);
   backdrop-filter: blur(10px);
 }
 
-/* Gold button */
+.icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 168, 75, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 168, 75, 0.08);
+}
+
+/* ── BOTÕES ── */
 .btn-gold {
   background: linear-gradient(135deg, #D4A84B 0%, #F0D080 50%, #C5943A 100%);
   color: #050D1F;
@@ -76,7 +86,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Navy button outline */
 .btn-outline-gold {
   border: 1px solid rgba(212, 168, 75, 0.5);
   color: #D4A84B;
@@ -88,19 +97,7 @@ body {
   border-color: #D4A84B;
 }
 
-/* Icon circle */
-.icon-circle {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 1px solid rgba(212, 168, 75, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(212, 168, 75, 0.08);
-}
-
-/* Section fade-in animation */
+/* ── ANIMAÇÕES ── */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
@@ -112,129 +109,14 @@ body {
   transform: translateY(0);
 }
 
-/* Navigation */
-.nav-scrolled {
-  background: rgba(5, 13, 31, 0.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(212, 168, 75, 0.15);
-}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
 
-/* Navbar links - desktop */
-.nav-link {
-  position: relative;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.05em;
-  font-weight: 300;
-  transition: color 0.3s ease;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--gold-400), var(--gold-300));
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link:hover {
-  color: var(--gold-400);
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* Navbar links - mobile */
-.nav-link-mobile {
-  position: relative;
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 0.05em;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  transition: color 0.3s ease;
-  display: block;
-}
-
-.nav-link-mobile::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--gold-400), var(--gold-300));
-  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link-mobile:hover {
-  color: var(--gold-400);
-}
-
-.nav-link-mobile:hover::after {
-  width: 100%;
-}
-
-/* Developer credit link */
-.dev-link {
-  position: relative;
-  display: inline-block;
-  font-weight: 600;
-  color: var(--gold-400);
-  transition: color 0.3s ease;
-}
-
-.dev-link::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--gold-400), var(--gold-300), transparent);
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dev-link::before {
-  content: '';
-  position: absolute;
-  inset: -2px -4px;
-  border-radius: 3px;
-  background: rgba(212, 168, 75, 0);
-  transition: background 0.3s ease;
-}
-
-.dev-link:hover {
-  color: var(--gold-300);
-}
-
-.dev-link:hover::after {
-  width: 100%;
-}
-
-.dev-link:hover::before {
-  background: rgba(212, 168, 75, 0.08);
-}
-
-/* WhatsApp float button */
-.whatsapp-float {
-  animation: pulse-wpp 2.5s ease-in-out infinite;
-}
-
-@keyframes pulse-wpp {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-  }
-}
-
-/* Decorative corner gold arcs */
+/* ── DECORAÇÕES ── */
 .gold-arc-tl {
   position: absolute;
   top: 0;
@@ -259,7 +141,50 @@ body {
   pointer-events: none;
 }
 
-/* Logo */
+/* ── NAVBAR — LAYOUT ── */
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-center {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  white-space: nowrap;
+}
+
+.nav-right {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 1024px) {
+  .nav-center { display: flex; }
+  .nav-right   { display: flex; }
+}
+
+.nav-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(212, 168, 75, 0.2);
+}
+
+.nav-scrolled {
+  background: rgba(5, 13, 31, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 168, 75, 0.15);
+}
+
+/* ── NAVBAR — LOGO ── */
 .logo-circle {
   border: 1px solid rgba(212, 168, 75, 0.5);
   color: var(--gold-400);
@@ -270,7 +195,7 @@ body {
   border-color: var(--gold-400);
 }
 
-/* Navbar links - desktop */
+/* ── NAVBAR — LINKS DESKTOP ── */
 .nav-link {
   position: relative;
   font-size: 0.875rem;
@@ -299,7 +224,7 @@ body {
   width: 100%;
 }
 
-/* Navbar links - mobile */
+/* ── NAVBAR — LINKS MOBILE ── */
 .nav-link-mobile {
   position: relative;
   display: block;
@@ -330,7 +255,7 @@ body {
   width: 100%;
 }
 
-/* Phone link */
+/* ── NAVBAR — PHONE + TOGGLE ── */
 .nav-phone {
   color: var(--gold-400);
   transition: color 0.3s ease;
@@ -340,7 +265,6 @@ body {
   color: var(--gold-300);
 }
 
-/* Mobile toggle button */
 .nav-toggle {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s ease;
@@ -354,10 +278,173 @@ body {
   color: var(--gold-400);
 }
 
-/* Stagger animation delays */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
-.delay-600 { animation-delay: 600ms; }
+/* ── FLAGS — DESKTOP ── */
+.flag-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(212, 168, 75, 0.06);
+  border: 1px solid rgba(212, 168, 75, 0.18);
+}
+
+.flag-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.flag-item:hover {
+  background: rgba(212, 168, 75, 0.12);
+  transform: translateY(-2px);
+}
+
+.flag-emoji {
+  font-size: 1.2rem;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  transition: filter 0.2s ease;
+}
+
+.flag-item:hover .flag-emoji {
+  filter: drop-shadow(0 2px 6px rgba(212, 168, 75, 0.4));
+}
+
+.flag-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(10, 22, 40, 0.95);
+  border: 1px solid rgba(212, 168, 75, 0.25);
+  color: var(--gold-300);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.flag-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: rgba(212, 168, 75, 0.25);
+}
+
+.flag-item:hover .flag-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── FLAGS — MOBILE ── */
+.flag-switcher-mobile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4px;
+}
+
+.flag-item-mobile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid rgba(212, 168, 75, 0.15);
+  background: rgba(212, 168, 75, 0.04);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.flag-item-mobile:hover {
+  background: rgba(212, 168, 75, 0.1);
+  border-color: rgba(212, 168, 75, 0.35);
+}
+
+.flag-emoji-mobile {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.flag-label-mobile {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.06em;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.flag-item-mobile:hover .flag-label-mobile {
+  color: var(--gold-400);
+}
+
+/* ── DEVELOPER LINK ── */
+.dev-link {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: var(--gold-400);
+  transition: color 0.3s ease;
+}
+
+.dev-link::before {
+  content: '';
+  position: absolute;
+  inset: -2px -4px;
+  border-radius: 3px;
+  background: rgba(212, 168, 75, 0);
+  transition: background 0.3s ease;
+}
+
+.dev-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-400), var(--gold-300), transparent);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dev-link:hover {
+  color: var(--gold-300);
+}
+
+.dev-link:hover::before {
+  background: rgba(212, 168, 75, 0.08);
+}
+
+.dev-link:hover::after {
+  width: 100%;
+}
+
+/* ── WHATSAPP FLOAT ── */
+.whatsapp-float {
+  animation: pulse-wpp 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-wpp {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+}
