@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
 
+const WA_MESSAGE = encodeURIComponent('Olá! Gostaria de mais informações sobre os serviços de imigração.')
+
 const navLinks = [
   { label: 'Início', href: '#inicio' },
   { label: 'Sobre', href: '#sobre' },
@@ -75,13 +77,13 @@ export default function Navbar() {
             <span>+1 (689) 351-0277</span>
           </a>
           <a
-            href="https://wa.me/16893510277"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-gold px-5 py-2 rounded-full text-sm"
-          >
-            Fale Conosco
-          </a>
+             href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
+             target="_blank"
+             rel="noopener noreferrer"
+             className="btn-gold px-5 py-2 rounded-full text-sm"
+           >
+             Fale Conosco
+           </a>
         </div>
 
         {/* Mobile toggle */}
@@ -120,13 +122,13 @@ export default function Navbar() {
             </div>
 
             <a
-              href="https://wa.me/16893510277"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold px-5 py-3 rounded-full text-sm text-center mt-2"
-            >
-              Fale Conosco pelo WhatsApp
-            </a>
+               href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="btn-gold px-5 py-3 rounded-full text-sm text-center mt-2"
+             >
+               Fale Conosco pelo WhatsApp
+             </a>
           </nav>
         </div>
       )}

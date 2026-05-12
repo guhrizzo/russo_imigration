@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import { ArrowUp } from 'lucide-react'
 
+const WA_MESSAGE = encodeURIComponent('Olá! Gostaria de mais informações sobre os serviços de imigração.')
+
 export default function WhatsAppFloat() {
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -46,12 +48,12 @@ export default function WhatsAppFloat() {
       `}</style>
 
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
-        {/* WhatsApp Button */}
-        <a
-          href="https://wa.me/16893510277"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Fale conosco pelo WhatsApp"
+       {/* WhatsApp Button */}
+         <a
+           href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Fale conosco pelo WhatsApp"
           className="wa-btn w-14 h-14 rounded-full flex items-center justify-center shadow-2xl"
           style={{
             background: '#25D366',

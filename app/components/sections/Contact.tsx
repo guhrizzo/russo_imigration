@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 
+const WA_MESSAGE = encodeURIComponent('Olá! Gostaria de mais informações sobre os serviços de imigração.')
+
 export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null)
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
@@ -70,13 +72,13 @@ export default function Contact() {
               <p className="text-white/55 text-sm mb-5">Descubra como podemos ajudar você a construir um novo futuro.</p>
 
                <a
-                 href="https://wa.me/16893510277"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold w-full justify-center"
-               >
-                Iniciar Conversa no WhatsApp
-              </a>
+                  href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold w-full justify-center"
+                >
+                 Iniciar Conversa no WhatsApp
+               </a>
             </div>
 
             {/* Contact details */}
