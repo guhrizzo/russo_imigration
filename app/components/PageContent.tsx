@@ -10,6 +10,7 @@ import Contact from './sections/Contact'
 import Footer from './Footer'
 import WhatsAppFloat from './WhatsAppFloat'
 import Faq from "./sections/Faq"
+import NotaryPublic from "./sections/NotaryPublic"
 
 export default function PageContent() {
   return (
@@ -18,6 +19,7 @@ export default function PageContent() {
       <Hero />
       <About />
       <Services />
+      <NotaryPublic />
       <WhyUs />
       <Testimonials />
       <Contact />

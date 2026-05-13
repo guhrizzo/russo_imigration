@@ -32,7 +32,12 @@
     "text1": "Russo Immigration was born from the mission to be the link between people seeking a new life and the opportunities the United States offers. Our team is made up of professionals who deeply understand immigration process challenges.",
     "text2": "Each case is handled with unique attention. We listen to your story, understand your situation, and design the most effective strategy for your process — whether asylum, visa, or regularization.",
     "text3": "From your first contact to conclusion, you have continuous support, total transparency, and the commitment of a team dedicated to your success.",
-    "tags": ["Confidential", "Efficient", "Reliable", "Empathetic"],
+    "tags": [
+      "Confidential",
+      "Efficient",
+      "Reliable",
+      "Empathetic"
+    ],
     "transformed_lives": "Lives Transformed",
     "mission": "Our Mission",
     "mission_text": "Create pathways and realize dreams. We guide each person with dedication, understanding that every story is unique. We build personalized solutions to transform lives.",
@@ -50,37 +55,62 @@
         "title": "Annual Asylum Filing",
         "badge": "Featured",
         "description": "Complete support for the asylum process in the USA. We handle all documentation, deadlines, and strategies to maximize your approval chances.",
-        "features": ["Case analysis", "Document preparation", "Hearing accompaniment", "Continuous support"]
+        "features": [
+          "Case analysis",
+          "Document preparation",
+          "Hearing accompaniment",
+          "Continuous support"
+        ]
       },
       {
         "title": "Immigration Defense",
         "badge": null,
         "description": "Strategic representation for immigration processes, including deportation defense and status regularization.",
-        "features": ["Deportation defense", "Status regularization", "Administrative appeals"]
+        "features": [
+          "Deportation defense",
+          "Status regularization",
+          "Administrative appeals"
+        ]
       },
       {
         "title": "Visas & Green Card",
         "badge": null,
         "description": "Expert guidance for work visa, family, and permanent residency applications in the United States.",
-        "features": ["Work visa", "Family reunification", "Permanent residency"]
+        "features": [
+          "Work visa",
+          "Family reunification",
+          "Permanent residency"
+        ]
       },
       {
         "title": "Protection & Confidentiality",
         "badge": null,
         "description": "All your information is treated with absolute confidentiality. Your privacy is our priority at every process step.",
-        "features": ["100% confidential", "Protected data", "Secure communication"]
+        "features": [
+          "100% confidential",
+          "Protected data",
+          "Secure communication"
+        ]
       },
       {
         "title": "Speed & Efficiency",
         "badge": null,
         "description": "Organized processes and dedicated team to advance your case with maximum speed within legal timeframes.",
-        "features": ["Deadline management", "Organized process", "Regular updates"]
+        "features": [
+          "Deadline management",
+          "Organized process",
+          "Regular updates"
+        ]
       },
       {
         "title": "Personalized Service",
         "badge": null,
         "description": "Each case is unique. Our team listens, understands, and cares for you with empathy, developing the best strategy for your situation.",
-        "features": ["Individual consultation", "Personalized strategy", "Close follow-up"]
+        "features": [
+          "Individual consultation",
+          "Personalized strategy",
+          "Close follow-up"
+        ]
       }
     ],
     "cta_label": "Ready to start?",
@@ -239,12 +269,60 @@
     "copyright": "© {year} Russo Immigration llc. All rights reserved.",
     "developed_by": "Developed by",
     "nav_items": [
-      { "label": "Home", "href": "#inicio" },
-      { "label": "About Us", "href": "#sobre" },
-      { "label": "Services", "href": "#servicos" },
-      { "label": "Why Us", "href": "#por-que-nos" },
-      { "label": "Testimonials", "href": "#depoimentos" },
-      { "label": "Contact", "href": "#contato" }
+      {
+        "label": "Home",
+        "href": "#inicio"
+      },
+      {
+        "label": "About Us",
+        "href": "#sobre"
+      },
+      {
+        "label": "Services",
+        "href": "#servicos"
+      },
+      {
+        "label": "Why Us",
+        "href": "#por-que-nos"
+      },
+      {
+        "label": "Testimonials",
+        "href": "#depoimentos"
+      },
+      {
+        "label": "Contact",
+        "href": "#contato"
+      }
     ]
+  },
+  "notary": {
+    "section_label": "Services • Notarization",
+    "description": "Official document authentication for immigration processes, international contracts, and legal use in the United States.",
+    "service1_title": "Signature Notarization",
+    "service1_text": "Identity verification of the signer and authentication of signatures on legal documents.",
+    "service2_title": "Copy Certification",
+    "service2_text": "Certification that document copies are true to the originals, accepted by government agencies and consulates.",
+    "service3_title": "Powers of Attorney & Affidavits",
+    "service3_text": "Formalization of powers of attorney, affidavits, and sworn statements valid in the USA.",
+    "service4_title": "Apostille – Hague Convention",
+    "service4_text": "Guidance and support for apostilling Brazilian documents for international use.",
+    "docs_title": "Accepted documents",
+    "docs_list": [
+      "Private contracts and agreements",
+      "Immigration documents (I-485, I-130, etc.)",
+      "Power of Attorney",
+      "Sworn statements (Affidavit)",
+      "Consular documents and passports"
+    ],
+    "why_title": "Why it matters",
+    "why_list": [
+      "Required by USCIS in visa processes",
+      "Validates documents in American courts",
+      "Needed for opening a business in the USA",
+      "Required in real estate transactions",
+      "Accepted by banks and financial institutions"
+    ],
+    "cta_text": "Need to notarize a document? Contact us to schedule.",
+    "cta_button": "Schedule via WhatsApp"
   }
 }

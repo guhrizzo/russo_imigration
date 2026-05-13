@@ -32,7 +32,12 @@
     "text1": "A Russo Immigration nasceu da missão de ser o elo entre pessoas que buscam uma nova vida e as oportunidades que os Estados Unidos oferecem. Nossa equipe é formada por profissionais que conhecem profundamente os desafios do processo imigratório.",
     "text2": "Cada caso é tratado com atenção única. Ouvimos sua história, entendemos sua situação e desenhamos a estratégia mais eficaz para o seu processo — seja ele de asilo, visto ou regularização.",
     "text3": "Do primeiro contato à conclusão, você conta com suporte contínuo, total transparência e o compromisso de uma equipe que se dedica ao seu sucesso.",
-    "tags": ["Confidencial", "Eficiente", "Confiável", "Empático"],
+    "tags": [
+      "Confidencial",
+      "Eficiente",
+      "Confiável",
+      "Empático"
+    ],
     "transformed_lives": "Vidas Transformadas",
     "mission": "Nossa Missão",
     "mission_text": "Criar caminhos e realizar sonhos. Orientamos cada pessoa com dedicação, entendendo que cada história é única. Construímos soluções personalizadas para transformar vidas.",
@@ -50,37 +55,62 @@
         "title": "Taxa Anual de Asilo",
         "badge": "Destaque",
         "description": "Assessoria completa para o processo de asilo nos EUA. Cuidamos de toda a documentação, prazos e estratégias para maximizar suas chances de aprovação.",
-        "features": ["Análise do caso", "Preparação de documentos", "Acompanhamento de audiências", "Suporte contínuo"]
+        "features": [
+          "Análise do caso",
+          "Preparação de documentos",
+          "Acompanhamento de audiências",
+          "Suporte contínuo"
+        ]
       },
       {
         "title": "Defesa em Imigração",
         "badge": null,
         "description": "Representação estratégica para processos de imigração, incluindo defesa contra deportação e regularização de status.",
-        "features": ["Defesa contra deportação", "Regularização de status", "Recursos administrativos"]
+        "features": [
+          "Defesa contra deportação",
+          "Regularização de status",
+          "Recursos administrativos"
+        ]
       },
       {
         "title": "Vistos & Green Card",
         "badge": null,
         "description": "Orientação especializada para pedidos de vistos de trabalho, família e residência permanente nos Estados Unidos.",
-        "features": ["Visto de trabalho", "Reunificação familiar", "Residência permanente"]
+        "features": [
+          "Visto de trabalho",
+          "Reunificação familiar",
+          "Residência permanente"
+        ]
       },
       {
         "title": "Proteção & Sigilo",
         "badge": null,
         "description": "Todas as suas informações são tratadas com absoluta confidencialidade. Sua privacidade é nossa prioridade em cada etapa do processo.",
-        "features": ["100% confidencial", "Dados protegidos", "Comunicação segura"]
+        "features": [
+          "100% confidencial",
+          "Dados protegidos",
+          "Comunicação segura"
+        ]
       },
       {
         "title": "Agilidade & Eficiência",
         "badge": null,
         "description": "Processos organizados e equipe dedicada para que seu caso avance com a máxima agilidade dentro dos prazos legais.",
-        "features": ["Gestão de prazos", "Processo organizado", "Atualizações regulares"]
+        "features": [
+          "Gestão de prazos",
+          "Processo organizado",
+          "Atualizações regulares"
+        ]
       },
       {
         "title": "Atendimento Personalizado",
         "badge": null,
         "description": "Cada caso é único. Nossa equipe ouve, entende e cuida de você com empatia, desenvolvendo a melhor estratégia para a sua situação.",
-        "features": ["Consulta individual", "Estratégia personalizada", "Acompanhamento próximo"]
+        "features": [
+          "Consulta individual",
+          "Estratégia personalizada",
+          "Acompanhamento próximo"
+        ]
       }
     ],
     "cta_label": "Pronto para começar?",
@@ -239,12 +269,60 @@
     "copyright": "© {year} Russo Immigration llc. Todos os direitos reservados.",
     "developed_by": "Desenvolvido por",
     "nav_items": [
-      { "label": "Início", "href": "#inicio" },
-      { "label": "Sobre Nós", "href": "#sobre" },
-      { "label": "Serviços", "href": "#servicos" },
-      { "label": "Por Que Nós", "href": "#por-que-nos" },
-      { "label": "Depoimentos", "href": "#depoimentos" },
-      { "label": "Contato", "href": "#contato" }
+      {
+        "label": "Início",
+        "href": "#inicio"
+      },
+      {
+        "label": "Sobre Nós",
+        "href": "#sobre"
+      },
+      {
+        "label": "Serviços",
+        "href": "#servicos"
+      },
+      {
+        "label": "Por Que Nós",
+        "href": "#por-que-nos"
+      },
+      {
+        "label": "Depoimentos",
+        "href": "#depoimentos"
+      },
+      {
+        "label": "Contato",
+        "href": "#contato"
+      }
     ]
+  },
+  "notary": {
+    "section_label": "Serviços • Notarização",
+    "description": "Autenticação oficial de documentos para processos de imigração, contratos internacionais e uso legal nos Estados Unidos.",
+    "service1_title": "Reconhecimento de Firma",
+    "service1_text": "Verificação da identidade do signatário e atesto de autenticidade de assinaturas em documentos legais.",
+    "service2_title": "Autenticação de Cópias",
+    "service2_text": "Certificação de que cópias de documentos são fiéis aos originais, aceita por órgãos governamentais e consulados.",
+    "service3_title": "Procurações e Declarações",
+    "service3_text": "Formalização de procurações, affidavits e declarações juramentadas com validade nos EUA.",
+    "service4_title": "Apostila de Haia",
+    "service4_text": "Orientação e suporte para apostilamento de documentos brasileiros para uso internacional.",
+    "docs_title": "Documentos aceitos",
+    "docs_list": [
+      "Contratos e acordos particulares",
+      "Documentos de imigração (I-485, I-130, etc.)",
+      "Procurações (Power of Attorney)",
+      "Declarações juramentadas (Affidavit)",
+      "Documentos consulares e passaportes"
+    ],
+    "why_title": "Por que é importante",
+    "why_list": [
+      "Exigido pelo USCIS em processos de visto",
+      "Valida documentos em tribunais americanos",
+      "Necessário para abertura de empresa nos EUA",
+      "Requisito em transações imobiliárias",
+      "Aceito por bancos e instituições financeiras"
+    ],
+    "cta_text": "Precisa notarizar um documento? Entre em contato para agendar.",
+    "cta_button": "Agendar via WhatsApp"
   }
 }

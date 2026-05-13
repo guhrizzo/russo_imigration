@@ -2,7 +2,9 @@
 
 import { useEffect, useRef } from 'react'
 import { FileText, Scale, Globe, ShieldCheck, Clock, Users2 } from 'lucide-react'
-import { useLanguage } from '@/app/i18n/LanguageContext' 
+import { useLanguage } from '@/app/i18n/LanguageContext'
+
+const WA_MESSAGE = encodeURIComponent('Olá! Gostaria de conhecer melhor os serviços da Russo Immigration e entender como vocês podem ajudar no meu caso.')
 
 const iconMap: Record<number, React.ReactNode> = {
   0: <FileText size={28} />,
@@ -108,7 +110,7 @@ export default function Services() {
             {t('services.cta_description')}
           </p>
            <a
-             href="https://wa.me/16893510277"
+             href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
              target="_blank"
              rel="noopener noreferrer"
              className="btn-gold inline-flex items-center gap-3 px-10 py-4 rounded-full text-base font-semibold"

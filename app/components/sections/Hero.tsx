@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react'
 import { ChevronDown, Shield, Star, Users } from 'lucide-react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
+const WA_MESSAGE = encodeURIComponent('Olá! Vim pelo site e gostaria de iniciar meu processo de imigração nos EUA. Podem me ajudar?')
+
 export default function Hero() {
   const { t } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
@@ -118,7 +120,7 @@ export default function Hero() {
 
         <div className="animate-on-scroll flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a
-            href="https://wa.me/16893510277"
+            href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold px-8 py-4 rounded-full text-base font-semibold flex items-center gap-3 w-full sm:w-auto justify-center"
