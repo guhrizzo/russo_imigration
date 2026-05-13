@@ -42,13 +42,11 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="#inicio" className="logo-link flex items-center gap-3">
-          <div className="logo-circle w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">
-            RS
-          </div>
-          <div className="hidden sm:block">
-            <div className="font-display text-white font-semibold text-lg leading-none tracking-widest">RUSSO</div>
-            <div className="text-[10px] tracking-[0.3em] font-light" style={{ color: 'var(--gold-400)' }}>IMMIGRATION</div>
-          </div>
+          <img
+            src="/logo-russo-imigration.png"
+            alt="Russo Immigration"
+            className="h-24 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop nav + flags */}

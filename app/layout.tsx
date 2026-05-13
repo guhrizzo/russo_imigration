@@ -3,12 +3,12 @@ import './globals.css'
 import { LanguageProvider } from './i18n/LanguageContext'
 
 export const metadata: Metadata = {
-  title: 'Russo Immigration | Novos Começos. Futuros Extraordinários.',
+  title: 'Russo Immigration | New Beginnings. Extraordinary Futures.',
   description: 'Especialistas em imigração nos EUA. Assessoria personalizada para seu processo de asilo, visto e legalização. Estamos com você em cada etapa.',
   keywords: 'russo immigration, imigração eua, asilo, visto americano, legalização eua, consultoria imigração',
   openGraph: {
     title: 'Russo Immigration',
-    description: 'Novos Começos. Futuros Extraordinários.',
+    description: 'New Beginnings. Extraordinary Futures.',
     type: 'website',
   },
 }

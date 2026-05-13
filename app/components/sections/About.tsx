@@ -77,9 +77,11 @@ export default function About() {
 
               {/* Decorative elements inside the card */}
               <div className="relative z-10 text-center p-12">
-                <div className="font-display text-8xl font-bold text-gold-400/10 mb-4">RS</div>
-                <div className="font-display text-2xl text-white font-semibold tracking-widest mb-2">RUSSO</div>
-                <div className="text-gold-400 text-xs tracking-[0.4em] mb-8">IMMIGRATION</div>
+                <img
+                  src="/logo-russo-imigration.png"
+                  alt="Russo Immigration"
+                  className="h-64 w-auto object-contain mx-auto mb-6"
+                />
                 <div className="gold-line w-full mb-8" />
                 <p className="text-white/50 text-sm italic font-display">
                   "{t('about.section_label')}<br />{t('hero.tagline')}"

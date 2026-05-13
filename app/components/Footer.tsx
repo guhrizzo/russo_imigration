@@ -20,13 +20,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-full border border-gold-400/50 flex items-center justify-center text-gold-400 font-display font-bold text-lg">
-                RS
-              </div>
-              <div>
-                <div className="font-display text-white font-semibold tracking-widest text-lg leading-none">RUSSO</div>
-                <div className="text-gold-400 text-[10px] tracking-[0.3em] font-light">IMMIGRATION</div>
-              </div>
+              <img
+                src="/logo-russo-imigration.png"
+                alt="Russo Immigration"
+                className="h-28 -ml-10 w-auto object-contain"
+              />
             </div>
             <p className="text-white/40 text-sm leading-relaxed mb-5">
               {t('footer.tagline')}<br />
