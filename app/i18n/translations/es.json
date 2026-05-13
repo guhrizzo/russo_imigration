@@ -65,16 +65,6 @@
         ]
       },
       {
-        "title": "Defensa Migratoria",
-        "badge": null,
-        "description": "Representación estratégica para procesos migratorios, incluyendo defensa contra deportación y regularización de estatus.",
-        "features": [
-          "Defensa contra deportación",
-          "Regularización de estatus",
-          "Apelaciones administrativas"
-        ]
-      },
-      {
         "title": "Visas y Tarjeta Verde",
         "badge": null,
         "description": "Orientación especializada para solicitudes de visa de trabajo, familia y residencia permanente en Estados Unidos.",
@@ -210,7 +200,7 @@
     "email_label": "Correo",
     "location_label": "Ubicación",
     "phone_value": "+1 (689) 351-0277",
-    "email_value": "contato@russoimmigration.com",
+    "email_value": "admin@russoimmigration.com",
     "location_value": "Estados Unidos",
     "form_name_label": "Nombre",
     "form_name_placeholder": "Tu nombre completo",
@@ -225,36 +215,36 @@
     "form_success_title": "¡Mensaje Enviado!",
     "form_success_description": "Nuestro equipo se comunicará contigo pronto."
   },
-  "faq": {
-    "section_label": "Soporte Especializado",
-    "title": "Resuelve Tus Dudas",
-    "description": "Todo lo que necesitas saber para iniciar tu viaje a Estados Unidos con seguridad legal.",
-    "faqs": [
-      {
-        "question": "¿Qué tipos de visa ayudan a obtener?",
-        "answer": "Asistimos con una amplia variedad de visas, incluyendo solicitudes de asilo, visas de trabajo (H-1B, L-1, O-1), visa de inversionista (EB-5), reunificación familiar (Tarjeta Verde) y regularización migratoria. Cada caso se analiza individualmente para identificar la mejor estrategia legal."
-      },
-      {
-        "question": "¿Cuál es el tiempo promedio para regularizar mi situación?",
-        "answer": "El plazo varía significativamente según el tipo de proceso. Las solicitudes de asilo pueden completarse en meses, mientras que las Tarjetas Verdes por lazos familiares o laborales suelen tomar de 1 a 3 años. En nuestra consulta inicial, presentamos una estimación realista para tu caso específico."
-      },
-      {
-        "question": "¿Mis datos se tratan confidencialmente?",
-        "answer": "Sí, 100%. Toda la información compartida con nosotros está protegida por protocolos rigurosos de privacidad. Nuestros profesionales siguen un código de conducta ético y nunca divulgamos datos de clientes a terceros. Tu seguridad y tranquilidad son nuestra prioridad."
-      },
-      {
-        "question": "¿Puedo iniciar el proceso mientras estoy en Brasil?",
-        "answer": "Sí. Atendemos clientes de cualquier ubicación completamente remoto. Realizamos consultas por video, procesamos documentos digitalmente y te guiamos en cada etapa antes incluso de llegar a Estados Unidos. Puedes comenzar el proceso hoy mismo."
-      },
-      {
-        "question": "¿Qué documentos son necesarios para comenzar?",
-        "answer": "Los documentos básicos típicamente incluyen pasaporte válido, acta de nacimiento, comprobante de domicilio y, dependiendo del tipo de proceso, documentación profesional o comprobante de lazos familiares. En nuestra primera consulta, proporcionamos una lista detallada y personalizada para tu caso."
-      },
-      {
-        "question": "¿Cómo funciona el seguimiento durante todo el proceso?",
-        "answer": "Tendrás un consultor dedicado disponible por WhatsApp, correo electrónico y videollamadas. Enviamos actualizaciones proactivas con cada cambio de estado, te preparamos para entrevistas con autoridades y revisamos toda la documentación antes de cualquier presentación. Nunca estarás solo en este viaje."
-      }
-    ],
+   "faq": {
+     "section_label": "Soporte Especializado",
+     "title": "Resuelve Tus Dudas",
+     "description": "Todo lo que necesitas saber para iniciar tu viaje a Estados Unidos con seguridad legal.",
+     "faqs": [
+       {
+         "question": "¿Quién puede iniciar un proceso de legalización en EE.UU.?",
+         "answer": "En EE.UU., el proceso de legalización puede ser iniciado por familiares que sean ciudadanos americanos o residentes permanentes, por empleadores que patrocinen visas de trabajo, por el propio inmigrante en casos específicos como asilo o habilidades extraordinarias, o por el gobierno en procesos humanitarios o de refugiados."
+       },
+       {
+         "question": "¿Quién entró por la frontera tiene oportunidad de conseguir la Tarjeta Verde?",
+         "answer": "Sí, quien entró por la frontera tiene oportunidad de conseguir la Tarjeta Verde, pero depende del caso. Normalmente, entrar sin inspección complica el proceso, pero aún existen posibilidades, como casarse con un ciudadano americano y solicitar ajuste de estatus a través del proceso consular con perdón (waiver), o solicitar asilo si hay miedo real de persecución en el país de origen."
+       },
+       {
+         "question": "¿Cuánto tiempo tarda un proceso migratorio en ser aprobado?",
+         "answer": "El tiempo para aprobación de un proceso migratorio en EE.UU. varía mucho según el tipo de solicitud. Por ejemplo, procesos familiares directos como matrimonio con ciudadano americano pueden tomar de 10 a 18 meses, mientras que solicitudes de Tarjeta Verde por hermanos pueden tardar 10 a 15 años. Los procesos de asilo pueden tomar 2 a 5 años o más, dependiendo del estado y la fila. Las visas de trabajo con certificación laboral típicamente toman 1 a 3 años."
+       },
+       {
+         "question": "¿Con cuáles tipos de visas trabajan ustedes?",
+         "answer": "Ofrecemos atención especializada para casos de asilo, Tarjeta Verde por matrimonio, visas EB-3 (trabajadores calificados), E-2 (inversión), SIJ (Estatus de Joven Inmigrante Especial) y VAWA (protección para víctimas de violencia doméstica). El equipo también brinda apoyo en visas como EB-1 para atletas y profesionales con habilidades extraordinarias, F-1 (estudiante), H-1B (trabajo especializado) y L-1 (transferencia dentro de la empresa)."
+       },
+       {
+         "question": "¿Existe algún riesgo al iniciar el proceso?",
+         "answer": "Sí, existe riesgo al iniciar un proceso migratorio en EE.UU., especialmente si la persona está fuera de estatus o entró sin inspección. Por ejemplo, si la solicitud es denegada, el inmigrante puede recibir una orden de deportación o ser colocado en procedimientos de remoción. Además, proporcionar información falsa o documentos incorrectos puede generar una barra de inadmisibilidad (prohibición de entrada) por varios años o permanentemente. Por eso, es esencial analizar el caso con un abogado de inmigración antes de iniciar cualquier proceso, asegurando que hay una base legal sólida y que los riesgos sean conocidos y calculados."
+       },
+       {
+         "question": "¿La consulta inicial es realmente gratis?",
+         "answer": "¡Sí! Ofrecemos una consulta gratuita con nuestros consultores para evaluar tu caso e indicar el mejor camino para tu proceso migratorio."
+       }
+     ],
     "cta_not_found": "¿Tu duda no fue respondida?",
     "cta_description": "Habla ahora con uno de nuestros especialistas en inmigración y recibe orientación personalizada.",
     "cta_button": "Hablar con un Especialista",

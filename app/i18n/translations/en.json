@@ -65,16 +65,6 @@
         ]
       },
       {
-        "title": "Immigration Defense",
-        "badge": null,
-        "description": "Strategic representation for immigration processes, including deportation defense and status regularization.",
-        "features": [
-          "Deportation defense",
-          "Status regularization",
-          "Administrative appeals"
-        ]
-      },
-      {
         "title": "Visas & Green Card",
         "badge": null,
         "description": "Expert guidance for work visa, family, and permanent residency applications in the United States.",
@@ -210,7 +200,7 @@
     "email_label": "Email",
     "location_label": "Location",
     "phone_value": "+1 (689) 351-0277",
-    "email_value": "contato@russoimmigration.com",
+    "email_value": "admin@russoimmigration.com",
     "location_value": "United States",
     "form_name_label": "Name",
     "form_name_placeholder": "Your full name",
@@ -225,36 +215,36 @@
     "form_success_title": "Message Sent!",
     "form_success_description": "Our team will contact you soon."
   },
-  "faq": {
-    "section_label": "Expert Support",
-    "title": "Get Your Questions Answered",
-    "description": "Everything you need to know to start your journey to the United States with legal security.",
-    "faqs": [
-      {
-        "question": "What types of visas do you help obtain?",
-        "answer": "We assist with a wide variety of visas, including asylum applications, work visas (H-1B, L-1, O-1), investor visa (EB-5), family reunification (Green Card), and immigration regularization. Each case is analyzed individually to identify the best legal strategy."
-      },
-      {
-        "question": "What is the average time to regularize my situation?",
-        "answer": "The timeframe varies significantly depending on the process type. Asylum applications can be completed in months, while Green Cards through family or employment ties typically take 1 to 3 years. During our initial consultation, we present a realistic estimate for your specific case."
-      },
-      {
-        "question": "Are my data treated confidentially?",
-        "answer": "Yes, 100%. All information shared with us is protected by rigorous privacy protocols. Our professionals follow an ethical code of conduct and never disclose client data to third parties. Your security and peace of mind are our priority."
-      },
-      {
-        "question": "Can I start the process while in Brazil?",
-        "answer": "Yes. We serve clients from any location completely remotely. We conduct video consultations, process documents digitally, and guide you at every stage before even arriving in the United States. You can start the process today."
-      },
-      {
-        "question": "What documents are needed to start?",
-        "answer": "Basic documents typically include a valid passport, birth certificate, proof of residence, and depending on the process type, professional documentation or family tie proof. At our first consultation, we provide a detailed and personalized list for your case."
-      },
-      {
-        "question": "How does the follow-up process work?",
-        "answer": "You'll have a dedicated consultant available via WhatsApp, email, and video calls. We send proactive updates with every status change, prepare you for authority interviews, and review all documentation before submission. You'll never be alone on this journey."
-      }
-    ],
+   "faq": {
+     "section_label": "Expert Support",
+     "title": "Get Your Questions Answered",
+     "description": "Everything you need to know to start your journey to the United States with legal security.",
+     "faqs": [
+       {
+         "question": "Who can start a legalization process in the USA?",
+         "answer": "In the USA, the legalization process can be initiated by family members who are American citizens or permanent residents, by employers who sponsor work visas, by the immigrant themselves in specific cases such as asylum or extraordinary abilities, or by the government in humanitarian or refugee processes."
+       },
+       {
+         "question": "If someone entered through the border, do they have a chance to get a Green Card?",
+         "answer": "Yes, someone who entered through the border has a chance to get a Green Card, but it depends on the case. Typically, entering without inspection complicates the process, but possibilities still exist, such as marrying an American citizen and requesting status adjustment through the consular process with waiver, or applying for asylum if there is real fear of persecution in the country of origin."
+       },
+       {
+         "question": "How long does an immigration process take to be approved?",
+         "answer": "The time for approval of a migration process in the USA varies greatly depending on the type of petition. For example, direct family processes such as marriage to an American citizen can take 10 to 18 months, while Green Card requests for siblings can take 10 to 15 years. Asylum processes can take 2 to 5 years or more, depending on the state and queue. Work visas with labor certification typically take 1 to 3 years."
+       },
+       {
+         "question": "What types of visas do you work with?",
+         "answer": "We offer specialized assistance for asylum cases, Green Card through marriage, EB-3 visas (skilled workers), E-2 (investment), SIJ (Special Immigrant Juvenile Status), and VAWA (protection for domestic violence victims). Our team also provides support for visas such as EB-1 for athletes and professionals with extraordinary abilities, F-1 (student), H-1B (specialized work), and L-1 (intra-company transfer)."
+       },
+       {
+         "question": "Is there any risk when starting the process?",
+         "answer": "Yes, there is risk when starting a migration process in the USA, especially if the person is out of status or entered without inspection. For example, if the request is denied, the immigrant may receive a deportation order or be placed in removal proceedings. Additionally, providing false information or incorrect documents can result in an admissibility bar (prohibition of entry) for several years or permanently. Therefore, it is essential to analyze the case with an immigration attorney before starting any process, ensuring that there is a solid legal basis and that the risks are known and calculated."
+       },
+       {
+         "question": "Is the initial consultation really free?",
+         "answer": "Yes! We offer a free consultation with our consultants to evaluate your case and indicate the best path for your migration process."
+       }
+     ],
     "cta_not_found": "Your question not answered?",
     "cta_description": "Talk now with one of our immigration specialists and receive personalized guidance.",
     "cta_button": "Talk to a Specialist",

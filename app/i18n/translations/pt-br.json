@@ -65,16 +65,6 @@
         ]
       },
       {
-        "title": "Defesa em Imigração",
-        "badge": null,
-        "description": "Representação estratégica para processos de imigração, incluindo defesa contra deportação e regularização de status.",
-        "features": [
-          "Defesa contra deportação",
-          "Regularização de status",
-          "Recursos administrativos"
-        ]
-      },
-      {
         "title": "Vistos & Green Card",
         "badge": null,
         "description": "Orientação especializada para pedidos de vistos de trabalho, família e residência permanente nos Estados Unidos.",
@@ -210,7 +200,7 @@
     "email_label": "Email",
     "location_label": "Localização",
     "phone_value": "+1 (689) 351-0277",
-    "email_value": "contato@russoimmigration.com",
+    "email_value": "admin@russoimmigration.com",
     "location_value": "Estados Unidos",
     "form_name_label": "Nome",
     "form_name_placeholder": "Seu nome completo",
@@ -231,28 +221,28 @@
     "description": "Tudo o que você precisa saber para iniciar sua jornada rumo aos Estados Unidos com segurança jurídica.",
     "faqs": [
       {
-        "question": "Quais tipos de visto vocês auxiliam a obter?",
-        "answer": "Assessoramos uma ampla variedade de vistos, incluindo pedidos de asilo, vistos de trabalho (H-1B, L-1, O-1), visto de investidor (EB-5), reagrupamento familiar (Green Card) e regularização de situações migratórias. Cada caso é analisado individualmente para identificar a melhor estratégia legal."
+        "question": "Quem pode iniciar um processo de legalização nos EUA?",
+        "answer": "Nos EUA, o processo de legalização pode ser iniciado por familiares que sejam cidadãos americanos ou residentes permanentes, por empregadores que patrocinem o visto de trabalho, pelo próprio imigrante em casos específicos como asilo ou habilidades extraordinárias, ou pelo governo em processos humanitários ou de refugiados."
       },
       {
-        "question": "Qual é o tempo médio para regularizar minha situação?",
-        "answer": "O prazo varia significativamente conforme o tipo de processo. Pedidos de asilo podem ser concluídos em meses, enquanto Green Cards por vínculo familiar ou laboral costumam levar de 1 a 3 anos. Durante nossa consulta inicial, apresentamos uma estimativa realista para o seu caso específico."
+        "question": "Quem entrou pela fronteira tem chance de conseguir o Green Card?",
+        "answer": "Sim, quem entrou pela fronteira tem chance de conseguir o Green Card, mas depende do caso. Normalmente, entrar sem inspeção complica o processo, mas ainda existem possibilidades, como casar com um cidadão americano e solicitar ajuste de status através do processo consular com perdão (waiver), ou pedir asilo se houver medo real de perseguição no país de origem."
       },
       {
-        "question": "Meus dados são tratados com confidencialidade?",
-        "answer": "Sim, 100%. Toda informação compartilhada conosco é protegida por rigorosos protocolos de privacidade. Nossos profissionais seguem um código de conduta ético e nunca divulgamos dados de clientes a terceiros. Sua segurança e tranquilidade são nossa prioridade."
+        "question": "Quanto tempo leva para um processo imigratório ser aprovado?",
+        "answer": "O tempo para aprovação de um processo migratório nos EUA varia muito conforme o tipo de pedido. Por exemplo, processos familiares diretos como casamento com cidadão americano podem levar de 10 a 18 meses, enquanto pedidos de Green Card por irmãos podem demorar 10 a 15 anos. Processos de asilo podem levar 2 a 5 anos ou mais, dependendo do estado e da fila. Já vistos de trabalho com certificação trabalhista geralmente levam 1 a 3 anos."
       },
       {
-        "question": "Posso iniciar o processo mesmo estando no Brasil?",
-        "answer": "Sim. Atendemos clientes de qualquer localidade de forma totalmente remota. Realizamos consultas por videochamada, processamos documentos digitalmente e guiamos você em cada etapa antes mesmo de sua chegada aos Estados Unidos. O processo pode ser iniciado hoje mesmo."
+        "question": "Com quais de tipos de vistos nós trabalhamos?",
+        "answer": "Nos oferecemos atendimento especializado para casos de asilo, Green Card por casamento, vistos EB‑3 (trabalho qualificado), E‑2 (investimento), SIJ (status de menor imigrante especial) e VAWA (proteção para vítimas de violência doméstica) a equipe também presta apoio em vistos como EB‑1 para atletas e profissionais de habilidade extraordinária, F‑1 (estudante), H‑1B (trabalho especializado) e L‑1 (transferência intraempresa)"
       },
       {
-        "question": "Quais documentos são necessários para começar?",
-        "answer": "Os documentos básicos geralmente incluem passaporte válido, certidão de nascimento, comprovante de residência e, dependendo do tipo de processo, documentação profissional ou comprovantes de vínculos familiares. Em nossa primeira consulta, fornecemos uma lista detalhada e personalizada para o seu caso."
+        "question": "Existe algum risco ao iniciar o processo?",
+        "answer": "Sim, existe risco ao iniciar um processo migratório nos EUA, especialmente se a pessoa está fora de status ou entrou sem inspeção. Por exemplo, se o pedido for negado, o imigrante pode receber ordem de deportação ou ser colocado em processo de remoção. Além disso, fornecer informações falsas ou documentos errados pode gerar bar de inadmissibilidade (proibição de entrada) por vários anos ou permanentemente. Por isso, é essencial analisar o caso com um advogado de imigração antes de iniciar qualquer processo, garantindo que há base legal sólida e que os riscos sejam conhecidos e calculados."
       },
       {
-        "question": "Como funciona o acompanhamento durante todo o processo?",
-        "answer": "Você terá um consultor dedicado disponível via WhatsApp, e-mail e videochamadas. Enviamos atualizações proativas a cada mudança de status, preparamos você para entrevistas com autoridades e revisamos toda a documentação antes de qualquer submissão. Nunca estará sozinho nessa jornada."
+        "question": "A consulta inicial é realmente gratuita ?",
+        "answer": "Sim! oferecemos uma consulta gratuita com seus consultores para avaliar o seu caso e indicar o melhor caminho para o seu processo migratório."
       }
     ],
     "cta_not_found": "Sua dúvida não foi respondida?",

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 import { useLanguage, type Language } from '@/app/i18n/LanguageContext'
 
 const WA_MESSAGE = encodeURIComponent('Olá! Gostaria de mais informações sobre os serviços de imigração.')
@@ -63,31 +63,40 @@ export default function Navbar() {
           ))}
       </nav>
 
-      {/* Right side: flags + CTA */}
-      <div className="hidden xl:flex items-center gap-3 shrink-0">
-        {/* Flag switcher */}
-        <div className="flag-switcher">
-          {flags.map((f) => (
-            <button
-              key={f.lang}
-              onClick={() => setLanguage(f.lang)}
-              className={`flag-item transition-opacity ${language === f.lang ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
-              aria-label={`Mudar para ${f.label}`}
-            >
-              <span className="flag-emoji">{f.emoji}</span>
-              <span className="flag-tooltip">{f.label}</span>
-            </button>
-          ))}
-        </div>
-        <a
-          href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-gold px-5 py-2 rounded-full text-sm whitespace-nowrap"
-        >
-          {t('navbar.speak_with_us')}
-        </a>
-      </div>
+       {/* Right side: phone + CTA + flags */}
+       <div className="hidden xl:flex items-center gap-3 shrink-0">
+         {/* Phone number */}
+         <a
+           href="tel:+16893510277"
+           className="flex items-center gap-1.5 text-[13px] font-medium text-white/80 hover:text-[#c9a84c] transition-colors whitespace-nowrap"
+           aria-label="Ligue para nós"
+         >
+           <Phone size={14} className="shrink-0" />
+           +1 (689) 351-0277
+         </a>
+         <a
+           href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
+           target="_blank"
+           rel="noopener noreferrer"
+           className="btn-gold px-5 py-2 rounded-full text-sm whitespace-nowrap"
+         >
+           {t('navbar.speak_with_us')}
+         </a>
+         {/* Flag switcher */}
+         <div className="flag-switcher">
+           {flags.map((f) => (
+             <button
+               key={f.lang}
+               onClick={() => setLanguage(f.lang)}
+               className={`flag-item transition-opacity ${language === f.lang ? 'opacity-100' : 'opacity-60 hover:opacity-80'}`}
+               aria-label={`Mudar para ${f.label}`}
+             >
+               <span className="flag-emoji">{f.emoji}</span>
+               <span className="flag-tooltip">{f.label}</span>
+             </button>
+           ))}
+         </div>
+       </div>
 
       {/* Mobile toggle */}
       <button
@@ -129,6 +138,15 @@ export default function Navbar() {
               </button>
             ))}
           </div>
+          {/* Phone mobile */}
+          <a
+            href="tel:+16893510277"
+            className="flex items-center justify-center gap-2 text-sm font-medium text-white/80 hover:text-[#c9a84c] transition-colors py-2"
+            aria-label="Ligue para nós"
+          >
+            <Phone size={15} className="shrink-0" />
+            +1 (689) 351-0277
+          </a>
           <a
             href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
             target="_blank"
