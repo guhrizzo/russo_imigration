@@ -29,11 +29,11 @@
   "about": {
     "section_label": "About Us",
     "title": "Russo Immigration",
-    "description": "We are immigration advisory specialists committed to turning your dream of living legally in the United States into reality. With humanized and strategic service, we're by your side at every step.",
+    "description": "We are a specialized advisory firm helping people achieve the dream of living legally in the USA. Our team is committed to being your partner at every step of the journey, from first contact to process completion.",
     "partner_title": "Your Partner in Your USA Journey",
-    "text1": "Russo Immigration was born from the mission to be the link between people seeking a new life and the opportunities the United States offers. Our team is made up of professionals who deeply understand immigration process challenges.",
-    "text2": "Each case is handled with unique attention. We listen to your story, understand your situation, and design the most effective strategy for your process — whether asylum, visa, or regularization.",
-    "text3": "From your first contact to conclusion, you have continuous support, total transparency, and the commitment of a team dedicated to your success.",
+    "text1": "Russo Immigration is a specialized advisory firm helping people achieve the dream of living legally in the USA. Our team, made up of professionals who understand firsthand the challenges of the immigration process, is committed to being your partner at every step of the journey.",
+    "text2": "In a short time, we've had the joy of helping over 500 people take a decisive step toward a new life in the United States. For us, every person is unique — which is why we offer personalized service, fully focused on your real needs.",
+    "text3": "If you're ready to take the first step toward a safer, more peaceful life in America, you can count on Russo Immigration. We are an immigration advisory firm. We are not a law firm.",
     "tags": [
       "Confidential",
       "Efficient",
@@ -42,11 +42,11 @@
     ],
     "transformed_lives": "Lives Transformed",
     "mission": "Our Mission",
-    "mission_text": "Create pathways and realize dreams. We guide each person with dedication, understanding that every story is unique. We build personalized solutions to transform lives.",
+    "mission_text": "\"Create pathways and realize dreams.\" We fulfill this mission by guiding each person with dedication, understanding that every story is unique. Russo builds safe, personalized paths to transform lives and help people achieve their dreams.",
     "vision": "Our Vision",
-    "vision_text": "Impact hundreds of lives by helping people achieve their dreams and live new opportunities in the United States with safety and peace of mind.",
+    "vision_text": "Impact hundreds of lives by helping people achieve their dreams and live new opportunities in the United States with safety and peace of mind — expanding our services to reach more and more people.",
     "values": "Our Values",
-    "values_text": "Empathy, commitment, ethics, and transparency. We are partners at every stage, from first contact to process conclusion, with complete integrity."
+    "values_text": "Empathy, commitment, ethics, and transparency. We put ourselves in others' shoes, act with ownership, and foster trust and integrity in every action — from first contact to the conclusion of your process."
   },
   "services": {
     "section_label": "What We Do",
@@ -215,36 +215,36 @@
     "form_success_title": "Message Sent!",
     "form_success_description": "Our team will contact you soon."
   },
-   "faq": {
-     "section_label": "Expert Support",
-     "title": "Get Your Questions Answered",
-     "description": "Everything you need to know to start your journey to the United States with legal security.",
-     "faqs": [
-       {
-         "question": "Who can start a legalization process in the USA?",
-         "answer": "In the USA, the legalization process can be initiated by family members who are American citizens or permanent residents, by employers who sponsor work visas, by the immigrant themselves in specific cases such as asylum or extraordinary abilities, or by the government in humanitarian or refugee processes."
-       },
-       {
-         "question": "If someone entered through the border, do they have a chance to get a Green Card?",
-         "answer": "Yes, someone who entered through the border has a chance to get a Green Card, but it depends on the case. Typically, entering without inspection complicates the process, but possibilities still exist, such as marrying an American citizen and requesting status adjustment through the consular process with waiver, or applying for asylum if there is real fear of persecution in the country of origin."
-       },
-       {
-         "question": "How long does an immigration process take to be approved?",
-         "answer": "The time for approval of a migration process in the USA varies greatly depending on the type of petition. For example, direct family processes such as marriage to an American citizen can take 10 to 18 months, while Green Card requests for siblings can take 10 to 15 years. Asylum processes can take 2 to 5 years or more, depending on the state and queue. Work visas with labor certification typically take 1 to 3 years."
-       },
-       {
-         "question": "What types of visas do you work with?",
-         "answer": "We offer specialized assistance for asylum cases, Green Card through marriage, EB-3 visas (skilled workers), E-2 (investment), SIJ (Special Immigrant Juvenile Status), and VAWA (protection for domestic violence victims). Our team also provides support for visas such as EB-1 for athletes and professionals with extraordinary abilities, F-1 (student), H-1B (specialized work), and L-1 (intra-company transfer)."
-       },
-       {
-         "question": "Is there any risk when starting the process?",
-         "answer": "Yes, there is risk when starting a migration process in the USA, especially if the person is out of status or entered without inspection. For example, if the request is denied, the immigrant may receive a deportation order or be placed in removal proceedings. Additionally, providing false information or incorrect documents can result in an admissibility bar (prohibition of entry) for several years or permanently. Therefore, it is essential to analyze the case with an immigration attorney before starting any process, ensuring that there is a solid legal basis and that the risks are known and calculated."
-       },
-       {
-         "question": "Is the initial consultation really free?",
-         "answer": "Yes! We offer a free consultation with our consultants to evaluate your case and indicate the best path for your migration process."
-       }
-     ],
+  "faq": {
+    "section_label": "Expert Support",
+    "title": "Get Your Questions Answered",
+    "description": "Everything you need to know to start your journey to the United States with legal security.",
+    "faqs": [
+      {
+        "question": "Who can start a legalization process in the USA?",
+        "answer": "In the USA, the legalization process can be initiated by family members who are American citizens or permanent residents, by employers who sponsor work visas, by the immigrant themselves in specific cases such as asylum or extraordinary abilities, or by the government in humanitarian or refugee processes."
+      },
+      {
+        "question": "If someone entered through the border, do they have a chance to get a Green Card?",
+        "answer": "Yes, someone who entered through the border has a chance to get a Green Card, but it depends on the case. Typically, entering without inspection complicates the process, but possibilities still exist, such as marrying an American citizen and requesting status adjustment through the consular process with waiver, or applying for asylum if there is real fear of persecution in the country of origin."
+      },
+      {
+        "question": "How long does an immigration process take to be approved?",
+        "answer": "The time for approval of a migration process in the USA varies greatly depending on the type of petition. For example, direct family processes such as marriage to an American citizen can take 10 to 18 months, while Green Card requests for siblings can take 10 to 15 years. Asylum processes can take 2 to 5 years or more, depending on the state and queue. Work visas with labor certification typically take 1 to 3 years."
+      },
+      {
+        "question": "What types of visas do you work with?",
+        "answer": "We offer specialized assistance for asylum cases, Green Card through marriage, EB-3 visas (skilled workers), E-2 (investment), SIJ (Special Immigrant Juvenile Status), and VAWA (protection for domestic violence victims). Our team also provides support for visas such as EB-1 for athletes and professionals with extraordinary abilities, F-1 (student), H-1B (specialized work), and L-1 (intra-company transfer)."
+      },
+      {
+        "question": "Is there any risk when starting the process?",
+        "answer": "Yes, there is risk when starting a migration process in the USA, especially if the person is out of status or entered without inspection. For example, if the request is denied, the immigrant may receive a deportation order or be placed in removal proceedings. Additionally, providing false information or incorrect documents can result in an admissibility bar (prohibition of entry) for several years or permanently. Therefore, it is essential to analyze the case with an immigration attorney before starting any process, ensuring that there is a solid legal basis and that the risks are known and calculated."
+      },
+      {
+        "question": "Is the initial consultation really free?",
+        "answer": "Yes! We offer a free consultation with our consultants to evaluate your case and indicate the best path for your migration process."
+      }
+    ],
     "cta_not_found": "Your question not answered?",
     "cta_description": "Talk now with one of our immigration specialists and receive personalized guidance.",
     "cta_button": "Talk to a Specialist",

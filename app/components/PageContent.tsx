@@ -12,6 +12,7 @@ import WhatsAppFloat from './WhatsAppFloat'
 import Faq from "./sections/Faq"
 import NotaryPublic from "./sections/NotaryPublic"
 
+
 export default function PageContent() {
   return (
     <main>
