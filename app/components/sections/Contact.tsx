@@ -11,6 +11,8 @@ export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null)
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,10 +28,25 @@ export default function Contact() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: integrate with email API (e.g., Resend)
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      if (!res.ok) throw new Error()
+      setSubmitted(true)
+    } catch {
+      setError('Ocorreu um erro. Tente novamente ou fale pelo WhatsApp.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const contactItems = [
@@ -78,14 +95,14 @@ export default function Contact() {
               <h3 className="font-display text-xl text-white font-semibold mb-2">{t('contact.whatsapp_title')}</h3>
               <p className="text-white/55 text-sm mb-5">{t('contact.whatsapp_description')}</p>
 
-               <a
-                  href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold w-full justify-center"
-                >
-                 {t('contact.whatsapp_button')}
-               </a>
+              <a
+                href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold w-full justify-center"
+              >
+                {t('contact.whatsapp_button')}
+              </a>
             </div>
 
             {/* Contact details */}
@@ -182,11 +199,16 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="btn-gold w-full py-4 rounded-xl font-semibold flex items-center justify-center gap-2 text-sm"
+                    disabled={loading}
+                    className="btn-gold w-full py-4 rounded-xl font-semibold flex items-center justify-center gap-2 text-sm disabled:opacity-60 disabled:cursor-not-allowed transition-opacity cursor-pointer"
                   >
                     <Send size={16} />
-                    {t('contact.form_submit')}
+                    {loading ? 'Enviando...' : t('contact.form_submit')}
                   </button>
+
+                  {error && (
+                    <p className="text-red-400 text-xs text-center">{error}</p>
+                  )}
 
                   <p className="text-white/30 text-xs text-center">
                     {t('contact.form_confidentiality')}
