@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: 'Formulário de Contato <clube.gustavorizzo.net.br>',
+      from: 'Formulário de Contato <noreply@clube.gustavorizzo.net.br>',
       to: 'admin@russoimmigration.com',
       replyTo: email,
       subject: `Nova mensagem de ${name}`,
