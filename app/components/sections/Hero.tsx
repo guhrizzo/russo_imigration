@@ -104,7 +104,7 @@ export default function Hero() {
           <Star size={12} fill="currentColor" />
         </div>
 
-        <h1 className="animate-on-scroll font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] mb-6">
+        <h1 className="animate-on-scroll font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6">
           {t('hero.title')}<br />
           <span
             className="text-transparent bg-clip-text"

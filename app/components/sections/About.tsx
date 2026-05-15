@@ -4,6 +4,12 @@ import { useEffect, useRef } from 'react'
 import { Target, Eye, Heart } from 'lucide-react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
+function renderBold(text: string) {
+  return text.split(/\*\*(.*?)\*\*/g).map((part, i) =>
+    i % 2 === 1 ? <strong key={i} className="text-white font-semibold">{part}</strong> : part
+  )
+}
+
 export default function About() {
   const { t, tRaw } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
@@ -108,15 +114,9 @@ export default function About() {
               {t('about.partner_title')}
             </h3>
             <div className="space-y-5 text-white/65 leading-relaxed">
-              <p>
-                {t('about.text1')}
-              </p>
-              <p>
-                {t('about.text2')}
-              </p>
-              <p>
-                {t('about.text3')}
-              </p>
+              <p>{t('about.text1')}</p>
+              <p>{t('about.text2')}</p>
+              <p>{renderBold(t('about.text3'))}</p>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">

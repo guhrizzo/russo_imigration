@@ -19,11 +19,11 @@ export default function PageContent() {
       <Navbar />
       <Hero />
       <About />
+      <WhyUs />
+      <Contact />
       <Services />
       <NotaryPublic />
-      <WhyUs />
       <Testimonials />
-      <Contact />
       <Faq/>
       <Footer />
       <WhatsAppFloat />
