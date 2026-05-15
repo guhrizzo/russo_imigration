@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
-
 @import "tailwindcss";
 
 /* ── VARIÁVEIS ── */
 :root {
-  --navy-950: #050D1F;
-  --navy-900: #0A1628;
-  --navy-800: #0E1E35;
-  --gold-400: #D4A84B;
-  --gold-300: #F0D080;
-  --gold-600: #A67A28;
+  --divus-dark: #070707;
+  --divus-blue: #1E3523;
+  --divus-blue-light: #264B38;
+  --divus-yellow: #EAFE45;
+  --divus-lime: #C4E545;
+  --divus-white: #FFFFFF;
+  --divus-darklime: #A8D546;
+  --divus-gold: #F4B843;
 }
 
 /* ── BASE ── */
@@ -22,9 +22,9 @@ html {
 }
 
 body {
-  background-color: var(--navy-950);
+  background-color: var(--divus-dark);
   color: #fff;
-  font-family: 'Outfit', sans-serif;
+  font-family: var(--font-jakarta, 'Plus Jakarta Sans', sans-serif);
   overflow-x: hidden;
 }
 
@@ -451,4 +451,189 @@ body {
   50% {
     box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
+}
+
+/* ── DIVUS SPECIFIC STYLES ── */
+
+/* Gradient Border Effect */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(135deg, #1E3523, #264B38);
+  border-radius: 16px;
+  padding: 1px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -1.5px;
+  left: -1px;
+  right: 0px;
+  bottom: -1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 60%);
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.gradient-border > * {
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1E3523, #264B38);
+}
+
+/* Primary Button Divus */
+.btn-primary-divus {
+  background: var(--divus-blue);
+  color: var(--divus-yellow);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-divus:hover {
+  background: var(--divus-blue-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(234, 254, 69, 0.2);
+}
+
+/* Hero Section */
+.hero-divus {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--divus-dark);
+  overflow: hidden;
+}
+
+.hero-divus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 53, 35, 0.5), rgba(38, 75, 56, 0.3));
+  z-index: 1;
+}
+
+.hero-divus-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-divus h1 {
+  font-family: var(--font-jakarta, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+  color: var(--divus-white);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-divus h2 {
+  font-family: var(--font-instrument, 'Instrument Sans', sans-serif);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--divus-yellow);
+  margin-bottom: 1.5rem;
+}
+
+.hero-divus p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about-divus {
+  background: var(--divus-white);
+  color: var(--divus-dark);
+  padding: 4rem 2rem;
+}
+
+.about-divus h2 {
+  color: var(--divus-yellow);
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.about-divus p {
+  color: var(--divus-darklime);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Mission Cards */
+.mission-card-divus {
+  background: linear-gradient(135deg, #1E3523, #264B38);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(234, 254, 69, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mission-card-divus:hover {
+  border-color: rgba(234, 254, 69, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(234, 254, 69, 0.15);
+}
+
+.mission-card-divus h3 {
+  color: var(--divus-yellow);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.mission-card-divus p {
+  color: var(--divus-darklime);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Yellow Accent Line */
+.yellow-accent {
+  width: 6px;
+  height: 6px;
+  background: var(--divus-yellow);
+  border-radius: 1px;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* Section Caption */
+.section-caption-divus {
+  color: var(--divus-yellow);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Video Background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
 }

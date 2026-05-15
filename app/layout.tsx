@@ -1,6 +1,26 @@
 import type { Metadata } from 'next'
+import { Plus_Jakarta_Sans, Instrument_Sans, Newsreader } from 'next/font/google'
 import './globals.css'
 import { LanguageProvider } from './i18n/LanguageContext'
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-jakarta',
+  weight: ['400', '500', '600', '700', '800'],
+})
+
+const instrumentSans = Instrument_Sans({
+  subsets: ['latin'],
+  variable: '--font-instrument',
+  weight: ['400', '500', '600', '700'],
+})
+
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  variable: '--font-newsreader',
+  weight: ['400'],
+  style: ['normal', 'italic'],
+})
 
 export const metadata: Metadata = {
   title: 'Russo Immigration | New Beginnings. Extraordinary Futures.',
@@ -19,12 +39,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${plusJakarta.variable} ${instrumentSans.variable} ${newsreader.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body>
+      <body className="font-jakarta">
         <LanguageProvider>
           {children}
         </LanguageProvider>

@@ -38,7 +38,7 @@ export default function Hero() {
       {/* Fundo sólido enquanto o vídeo não carrega — elimina o flash branco/preto */}
       <div
         className="absolute inset-0"
-        style={{ zIndex: 0, backgroundColor: '#050C1C' }}
+        style={{ zIndex: 0, backgroundColor: '#070707' }}
       />
 
       {/* ── VIDEO BACKGROUND ── */}
@@ -64,57 +64,56 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           zIndex: 2,
-          background: 'linear-gradient(to bottom, rgba(5,12,28,0.72) 0%, rgba(5,12,28,0.55) 50%, rgba(5,12,28,0.80) 100%)',
+          background: 'linear-gradient(to bottom, rgba(7,7,7,0.8) 0%, rgba(30,53,35,0.6) 50%, rgba(7,7,7,0.85) 100%)',
         }}
       />
       <div
         className="absolute inset-0"
         style={{
           zIndex: 2,
-          background: 'linear-gradient(to right, rgba(10,22,50,0.6) 0%, transparent 60%)',
+          background: 'linear-gradient(to right, rgba(30,53,35,0.7) 0%, transparent 60%)',
         }}
       />
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full"
         style={{
           zIndex: 2,
-          background: 'radial-gradient(ellipse at 50% 0%, rgba(212,168,75,0.15) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at 50% 0%, rgba(234,254,69,0.1) 0%, transparent 70%)',
         }}
       />
 
       {/* ── DECORAÇÕES ── */}
       <div className="absolute top-0 left-0 w-64 h-64 pointer-events-none" style={{ zIndex: 3 }}>
         <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0 Q130 0 260 130" stroke="rgba(212,168,75,0.35)" strokeWidth="1.5" fill="none" />
-          <path d="M0 0 Q90 0 180 90" stroke="rgba(212,168,75,0.18)" strokeWidth="1" fill="none" />
+          <path d="M0 0 Q130 0 260 130" stroke="rgba(234,254,69,0.2)" strokeWidth="1.5" fill="none" />
+          <path d="M0 0 Q90 0 180 90" stroke="rgba(234,254,69,0.1)" strokeWidth="1" fill="none" />
         </svg>
       </div>
       <div className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none rotate-180" style={{ zIndex: 3 }}>
         <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0 Q130 0 260 130" stroke="rgba(212,168,75,0.35)" strokeWidth="1.5" fill="none" />
-          <path d="M0 0 Q90 0 180 90" stroke="rgba(212,168,75,0.18)" strokeWidth="1" fill="none" />
+          <path d="M0 0 Q130 0 260 130" stroke="rgba(234,254,69,0.2)" strokeWidth="1.5" fill="none" />
+          <path d="M0 0 Q90 0 180 90" stroke="rgba(234,254,69,0.1)" strokeWidth="1" fill="none" />
         </svg>
       </div>
 
       {/* ── CONTENT ── */}
       <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20 text-center" style={{ zIndex: 10 }}>
-        <div className="animate-on-scroll inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gold-400/30 bg-gold-400/5 text-gold-400 text-xs tracking-[0.2em] font-medium uppercase mb-10">
+        <div className="animate-on-scroll inline-flex items-center gap-2 px-5 py-2 rounded-full border border-divus-yellow/30 bg-divus-yellow/5 text-divus-yellow text-xs tracking-[0.2em] font-medium uppercase mb-10">
           <Star size={12} fill="currentColor" />
           {t('hero.tagline')}
           <Star size={12} fill="currentColor" />
         </div>
 
-        <h1 className="animate-on-scroll font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6">
+        <h1 className="animate-on-scroll font-jakarta text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6">
           {t('hero.title')}<br />
           <span
-            className="text-transparent bg-clip-text"
-            style={{ backgroundImage: 'linear-gradient(135deg, #D4A84B 0%, #F0D080 50%, #C5943A 100%)' }}
+            className="text-divus-yellow"
           >
             {t('hero.title_highlight')}
           </span>
         </h1>
 
-        <p className="animate-on-scroll max-w-2xl mx-auto text-white/65 text-lg md:text-xl leading-relaxed mb-12 font-light">
+        <p className="animate-on-scroll max-w-2xl mx-auto text-white/70 text-lg md:text-xl leading-relaxed mb-12 font-light">
           {t('hero.description')}
         </p>
 
@@ -123,7 +122,7 @@ export default function Hero() {
             href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gold px-8 py-4 rounded-full text-base font-semibold flex items-center gap-3 w-full sm:w-auto justify-center"
+            className="px-8 py-4 rounded-lg bg-divus-yellow text-divus-dark font-semibold text-base flex items-center gap-3 w-full sm:w-auto justify-center hover:bg-divus-lime transition-all duration-300 hover:shadow-lg hover:shadow-divus-yellow/30"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -132,7 +131,7 @@ export default function Hero() {
           </a>
           <a
             href="#sobre"
-            className="btn-outline-gold px-8 py-4 rounded-full text-base font-medium flex items-center gap-2 w-full sm:w-auto justify-center"
+            className="px-8 py-4 rounded-lg border-2 border-divus-yellow text-divus-yellow font-semibold text-base w-full sm:w-auto text-center hover:bg-divus-yellow/10 transition-all duration-300"
           >
             {t('hero.learn_story')}
           </a>
@@ -144,27 +143,27 @@ export default function Hero() {
             { icon: <Shield size={18} />, value: '100%', label: t('hero.total_confidentiality') },
             { icon: <Star size={18} fill="currentColor" />, value: '5★', label: t('hero.client_rating') },
           ].map((stat, i) => (
-            <div key={i} className="glass-card rounded-2xl px-6 py-4 flex items-center gap-4">
-              <div className="text-gold-400">{stat.icon}</div>
+            <div key={i} className="bg-divus-blue/40 backdrop-blur-md rounded-lg px-6 py-4 flex items-center gap-4 border border-divus-yellow/10 hover:border-divus-yellow/30 transition-all">
+              <div className="text-divus-yellow">{stat.icon}</div>
               <div className="text-left">
-                <div className="text-white font-display font-bold text-xl">{stat.value}</div>
-                <div className="text-white/50 text-xs tracking-wide">{stat.label}</div>
+                <div className="text-divus-white font-jakarta font-bold text-xl">{stat.value}</div>
+                <div className="text-white/60 text-xs tracking-wide">{stat.label}</div>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator        */}
       <a
         href="#sobre"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold-400/50 hover:text-gold-400 transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-divus-yellow/60 hover:text-divus-yellow transition-colors"
         style={{ zIndex: 10, animation: 'float 2s ease-in-out infinite' }}
       >
         <ChevronDown size={24} />
       </a>
 
-      <div className="absolute bottom-0 left-0 right-0 gold-line" style={{ zIndex: 10 }} />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-divus-yellow/50 to-transparent" style={{ zIndex: 10 }} />
     </section>
   )
 }

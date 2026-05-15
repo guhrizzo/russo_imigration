@@ -8,23 +8,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          950: '#050D1F',
-          900: '#0A1628',
-          800: '#0E1E35',
-          700: '#152844',
-          600: '#1C3258',
-        },
-        gold: {
-          300: '#F0D080',
-          400: '#D4A84B',
-          500: '#C5943A',
-          600: '#A67A28',
-        },
+        'divus-dark': '#070707',
+        'divus-blue': '#1E3523',
+        'divus-blue-light': '#264B38',
+        'divus-yellow': '#EAFE45',
+        'divus-lime': '#C4E545',
+        'divus-white': '#FFFFFF',
+        'divus-darklime': '#A8D546',
+        'divus-gold': '#F4B843',
       },
       fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Outfit', 'system-ui', 'sans-serif'],
+        'jakarta': ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        'instrument': ['Instrument Sans', 'system-ui', 'sans-serif'],
+        'newsreader': ['Newsreader', 'Georgia', 'serif'],
+        display: ['Plus Jakarta Sans', 'Georgia', 'serif'],
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease-out forwards',
