@@ -83,32 +83,13 @@
           "Datos protegidos",
           "Comunicación segura"
         ]
-      },
-      {
-        "title": "Agilidad y Eficiencia",
-        "badge": null,
-        "description": "Procesos organizados y equipo dedicado para que tu caso avance con máxima agilidad dentro de los plazos legales.",
-        "features": [
-          "Gestión de plazos",
-          "Proceso organizado",
-          "Actualizaciones regulares"
-        ]
-      },
-      {
-        "title": "Servicio Personalizado",
-        "badge": null,
-        "description": "Cada caso es único. Nuestro equipo te escucha, entiende y cuida con empatía, desarrollando la mejor estrategia para tu situación.",
-        "features": [
-          "Consulta individual",
-          "Estrategia personalizada",
-          "Seguimiento cercano"
-        ]
       }
     ],
     "cta_label": "¿Listo para comenzar?",
     "cta_title": "Estamos Contigo en Cada Paso",
     "cta_description": "Contactanos hoy y descubre cómo podemos ayudarte a construir un nuevo futuro en Estados Unidos.",
-    "cta_button": "Contactanos Hoy"
+    "cta_button": "Contactanos Hoy",
+    "learn_more": "Saber Más"
   },
   "why_us": {
     "section_label": "Nuestra Diferencia",

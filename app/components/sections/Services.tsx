@@ -1,127 +1,262 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
-import { FileText, Scale, Globe, ShieldCheck, Clock, Users2 } from 'lucide-react'
+import { useEffect, useRef, useState, useMemo } from 'react'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
 import { useLanguage } from '@/app/i18n/LanguageContext'
+
+interface FeatureItem {
+  title: string
+  description: string
+}
+
+interface ServiceCard {
+  id: string
+  title: string
+  description: string
+  features: FeatureItem[]
+  image: string
+  imageAlt: string
+  imagePosition: 'left' | 'right'
+  buttonText: string
+  buttonHref?: string
+}
+
+interface ServicesProps {
+  cards?: ServiceCard[]
+  useDictionary?: boolean
+}
 
 const WA_MESSAGE = encodeURIComponent('Olá! Gostaria de conhecer melhor os serviços da Russo Immigration e entender como vocês podem ajudar no meu caso.')
 
-const iconMap: Record<number, React.ReactNode> = {
-  0: <FileText size={28} />,
-  1: <Scale size={28} />,
-  2: <Globe size={28} />,
-  3: <ShieldCheck size={28} />,
-  4: <Clock size={28} />,
-  5: <Users2 size={28} />,
-}
-
-export default function Services() {
-  const { t ,tRaw  } = useLanguage()
+export default function Services({
+  cards: externalCards,
+  useDictionary = true
+}: ServicesProps = {}) {
+  const { t, tRaw, language } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
+  const [visibleCards, setVisibleCards] = useState<Set<string>>(new Set())
 
-  const services = (tRaw('services.services') as any[]).map((service: any, i: number) => ({
-  ...service,
-  icon: iconMap[i],
-}))
+  /**
+   * Construir cards 100% a partir do dicionário i18n
+   */
+  const buildCardsFromDictionary = (): ServiceCard[] => {
+    try {
+      const servicesData = tRaw('services.services') as any[]
+
+      console.log('🌍 Language:', language)
+      console.log('📋 servicesData:', servicesData)
+
+      if (!servicesData || !Array.isArray(servicesData)) {
+        console.warn('❌ No services data found in dictionary')
+        return []
+      }
+
+      const images = ['/img-05.png', '/img-06.png', '/img-07.png']
+
+      const allCards: ServiceCard[] = servicesData.map((service: any, index: number) => ({
+        id: `service-card-${index}`,
+        title: service.title,
+        description: service.description,
+        features: service.features || [],
+        image: images[index % images.length],
+        imageAlt: service.title,
+        imagePosition: index % 2 === 0 ? 'left' : 'right',
+        buttonText: t('services.learn_more') || 'Saiba Mais',
+        buttonHref: '#contact',
+      }))
+
+      console.log('✅ Created', allCards.length, 'service cards from dictionary')
+      return allCards
+
+    } catch (error) {
+      console.error('❌ Error loading cards from dictionary:', error)
+      return []
+    }
+  }
+
+  const cardSections = useMemo(() => {
+    if (externalCards) {
+      console.log('📌 Using external cards prop')
+      return externalCards
+    }
+    return useDictionary ? buildCardsFromDictionary() : []
+  }, [language, externalCards, useDictionary])
+
+  if (cardSections.length === 0) {
+    console.warn('⚠️  No cards to display')
+    return null
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('visible')
+          const cardId = entry.target.getAttribute('data-card-id')
+          if (entry.isIntersecting && cardId) {
+            setVisibleCards(prev => new Set(prev).add(cardId))
+          }
         })
       },
-      { threshold: 0.1 }
+      { threshold: 0.15 }
     )
-    const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll')
-    elements?.forEach((el) => observer.observe(el))
+
+    const cards = sectionRef.current?.querySelectorAll('[data-card-id]')
+    cards?.forEach((card: any) => observer.observe(card))
+
     return () => observer.disconnect()
   }, [])
 
+  const sectionTitle = t('services.title')
+  const sectionLabel = t('services.section_label')
+  const sectionDescription = t('services.description')
+
   return (
-    <section id="servicos" ref={sectionRef} className="relative py-28 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-navy-950" />
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] rounded-full opacity-10 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, #1C3258 0%, transparent 70%)' }}
-      />
+    <section id="servicos" ref={sectionRef} className="relative py-32 overflow-hidden bg-navy-900">
+      {/* Background decoration */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-gold-400/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-blue-500/5 blur-3xl" />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <div className="animate-on-scroll text-center mb-20">
-          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase font-medium mb-4">{t('services.section_label')}</p>
-          <h2 className="font-display text-4xl md:text-5xl text-white font-bold mb-6 heading-underline">
-            {t('services.title')}
-          </h2>
-          <p className="max-w-xl mx-auto text-white/60 leading-relaxed font-light">
-            {t('services.description')}
-          </p>
+        {/* Section Header */}
+        <div className="mb-20 text-center">
+          {sectionLabel && (
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-2">
+              {sectionLabel}
+            </p>
+          )}
+          {sectionTitle && (
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {sectionTitle}
+            </h2>
+          )}
+          {sectionDescription && (
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+              {sectionDescription}
+            </p>
+          )}
         </div>
 
-        {/* Services grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service: any, i: number) => (
-            <div
-              key={i}
-              className={`animate-on-scroll relative glass-card rounded-2xl p-8 hover:border-gold-400/40 transition-all duration-300 group cursor-pointer
-                ${i === 0 ? 'border-gold-400/40 md:col-span-2 lg:col-span-1' : ''}`}
-            >
-              {service.badge && (
-                <div className="absolute top-5 right-5 px-3 py-1 rounded-full text-xs font-semibold tracking-wide"
-                  style={{ background: 'linear-gradient(135deg, #D4A84B, #F0D080)', color: '#050D1F' }}>
-                  {service.badge}
+        {/* Cards Section */}
+        <div className="space-y-16">
+          {cardSections.map((card, idx) => {
+            const isVisible = visibleCards.has(card.id)
+            const isImageRight = card.imagePosition === 'right'
+
+            return (
+              <div
+                key={card.id}
+                data-card-id={card.id}
+                className={`group opacity-0 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'translate-y-16'
+                  }`}
+              >
+                {/* Card Container */}
+                <div className="relative rounded-3xl overflow-hidden bg-linear-gradient-to-br from-navy-800/50 to-navy-900/30 backdrop-blur-xl border border-gold-400/20 group-hover:border-gold-400/40 transition-all duration-500 shadow-2xl">
+
+                  {/* Active state gradient */}
+                  <div className="absolute inset-0 bg-linear-to-br from-gold-400/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  {/* Grid Layout */}
+                  <div className={`relative z-10 grid lg:grid-cols-2 gap-8 items-start p-10 md:p-16`}>
+
+                    {/* Content Side */}
+                    <div className={`flex flex-col gap-8 ${isImageRight ? 'lg:order-2' : 'lg:order-1'}`}>
+                      {/* Card Number */}
+                      <div className="flex items-center gap-3">
+                        <p className="text-gold-400 text-sm font-light tracking-[0.2em]">
+                          /{String(idx + 1).padStart(3, '0')}
+                        </p>
+                      </div>
+
+                      {/* Title */}
+                      <h2 className="font-display text-3xl md:text-4xl xl:text-5xl text-white font-bold leading-tight tracking-tight group-hover:text-gold-400 transition-colors duration-300">
+                        {card.title}
+                      </h2>
+
+                      {/* Description */}
+                      {card.description && (
+                        <p className="text-white/70 text-base md:text-lg leading-relaxed font-light max-w-xl">
+                          {card.description}
+                        </p>
+                      )}
+
+                      {/* CTA Button */}
+                      <div>
+                        <a
+                          href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group/btn inline-flex items-center gap-3 px-8 py-4 rounded-full bg-linear-to-r from-gold-400 to-gold-500 text-navy-900 font-semibold text-base md:text-lg hover:shadow-2xl hover:shadow-gold-400/50 transition-all duration-300 hover:-translate-y-1 active:translate-y-0"
+                        >
+                          <span>{card.buttonText}</span>
+                          <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Image Side */}
+                    <div className={`relative ${isImageRight ? 'lg:order-1' : 'lg:order-2'}`}>
+                      <div className="relative aspect-4/3 rounded-2xl overflow-hidden group/img">
+                        {/* Image container */}
+                        <div className="relative w-full h-full bg-linear-gradient-to-br from-gold-400/10 to-blue-500/10">
+                          <Image
+                            src={card.image}
+                            alt={card.imageAlt}
+                            fill
+                            className="object-cover group-hover/img:scale-110 transition-transform duration-700"
+                            priority={idx === 0}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+                          />
+                        </div>
+
+                        {/* Overlay gradient on hover */}
+                        <div className="absolute inset-0 bg-linear-to-t from-navy-900/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
+
+                        {/* Badge floating */}
+                        <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-linear-to-br from-gold-400 to-gold-300 flex items-center justify-center shadow-2xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 text-navy-950 font-bold text-lg"
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                          }}
+                        >
+                          {String(idx + 1).padStart(2, '0')}
+                        </div>
+
+                        {/* Shine effect */}
+                        <div className="absolute inset-0 opacity-0 group-hover/img:opacity-100 transition-opacity duration-500"
+                          style={{
+                            background: 'linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
+                            pointerEvents: 'none'
+                          }} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              )}
-
-              <div className="icon-circle mb-6 group-hover:bg-gold-400/15 transition-colors text-gold-400">
-                {service.icon}
               </div>
-
-              <h3 className="font-display text-xl text-white font-semibold mb-3">{service.title}</h3>
-              <p className="text-white/55 text-sm leading-relaxed mb-6">{service.description}</p>
-
-              <ul className="space-y-2">
-                {service.features.map((feat: string, j: number) => (
-                  <li key={j} className="flex items-center gap-2 text-xs text-white/50">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold-400/60 shrink-0" />
-                    {feat}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA banner */}
-        <div className="animate-on-scroll mt-16 relative rounded-3xl overflow-hidden p-10 text-center"
-          style={{ background: 'linear-gradient(135deg, rgba(28,50,88,0.9) 0%, rgba(14,30,53,0.95) 100%)', border: '1px solid rgba(212,168,75,0.25)' }}>
-          {/* Gold corner accents */}
-          <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-gold-400/30" />
-          <div className="absolute top-4 right-4 w-8 h-8 border-t border-r border-gold-400/30" />
-          <div className="absolute bottom-4 left-4 w-8 h-8 border-b border-l border-gold-400/30" />
-          <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-gold-400/30" />
-
-          <p className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-4">{t('services.cta_label')}</p>
-          <h3 className="font-display text-3xl text-white font-bold mb-4">
-            {t('services.cta_title')}
-          </h3>
-          <p className="text-white/60 mb-8 max-w-lg mx-auto font-light">
-            {t('services.cta_description')}
-          </p>
-           <a
-             href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
-             target="_blank"
-             rel="noopener noreferrer"
-             className="btn-gold inline-flex items-center gap-3 px-10 py-4 rounded-full text-base font-semibold"
-           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            {t('services.cta_button')}
-          </a>
+            )
+          })}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(12px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in-up {
+          animation: fade-in-up 0.6s ease-out forwards;
+        }
+      `}</style>
     </section>
   )
 }

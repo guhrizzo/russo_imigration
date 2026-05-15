@@ -198,10 +198,10 @@ export default function WhyUsSection({
                 }`}
               >
                 {/* Card Container */}
-                <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-navy-800/50 to-navy-900/30 backdrop-blur-xl border border-gold-400/20 group-hover:border-gold-400/40 transition-all duration-500 shadow-2xl">
+                <div className="relative rounded-3xl overflow-hidden bg-linear-gradient-to-br from-navy-800/50 to-navy-900/30 backdrop-blur-xl border border-gold-400/20 group-hover:border-gold-400/40 transition-all duration-500 shadow-2xl">
                   
                   {/* Active state gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold-400/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-linear-to-br from-gold-400/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   {/* Grid Layout */}
                   <div className={`relative z-10 grid lg:grid-cols-2 gap-12 items-stretch p-10 md:p-16`}>
@@ -233,8 +233,8 @@ export default function WhyUsSection({
                               style={{ animationDelay: `${isVisible ? featureIdx * 100 : 0}ms` }}
                             >
                               {/* Checkmark */}
-                              <div className="flex-shrink-0 mt-1">
-                                <CheckCircle2 size={24} className="text-gold-400 flex-shrink-0" />
+                              <div className="shrink-0 mt-1">
+                                <CheckCircle2 size={24} className="text-gold-400 shrink-0" />
                               </div>
                               
                               <div className="flex-1">
@@ -256,11 +256,11 @@ export default function WhyUsSection({
                           {card.badges.map((badge, badgeIdx) => (
                             <div
                               key={badgeIdx}
-                              className="relative rounded-2xl p-6 bg-gradient-to-br from-navy-800/60 to-navy-900/40 border border-gold-400/20 group-hover/badge:border-gold-400/40 transition-all duration-300 opacity-0 animate-fade-in-up"
+                              className="relative rounded-2xl p-6 bg-linear-gradient-to-br from-navy-800/60 to-navy-900/40 border border-gold-400/20 group-hover/badge:border-gold-400/40 transition-all duration-300 opacity-0 animate-fade-in-up"
                               style={{ animationDelay: `${isVisible ? (card.features.length + badgeIdx) * 100 : 0}ms` }}
                             >
                               <div className="flex items-start gap-3 group-hover/badge:gap-4 transition-all">
-                                <span className="text-3xl flex-shrink-0">{badge.icon}</span>
+                                <span className="text-3xl shrink-0">{badge.icon}</span>
                                 <div>
                                   <h4 className="text-white font-semibold text-base mb-1">
                                     {badge.title}
@@ -279,7 +279,7 @@ export default function WhyUsSection({
                       <div>
                         <a
                           href={card.buttonHref || '#'}
-                          className="group/btn inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-gold-400 to-gold-500 text-navy-900 font-semibold text-base md:text-lg hover:shadow-2xl hover:shadow-gold-400/50 transition-all duration-300 hover:-translate-y-1 active:translate-y-0"
+                          className="group/btn inline-flex items-center gap-3 px-8 py-4 rounded-full bg-linear-to-r from-gold-400 to-gold-500 text-navy-900 font-semibold text-base md:text-lg hover:shadow-2xl hover:shadow-gold-400/50 transition-all duration-300 hover:-translate-y-1 active:translate-y-0"
                         >
                           <span>{card.buttonText}</span>
                           <ArrowRight size={20} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
@@ -291,7 +291,7 @@ export default function WhyUsSection({
                     <div className={`relative ${isImageRight ? 'lg:order-1' : 'lg:order-2'}`}>
                       <div className="relative h-full min-h-96 rounded-2xl overflow-hidden group/img">
                         {/* Image container with loading state */}
-                        <div className="relative w-full h-full bg-gradient-to-br from-gold-400/10 to-blue-500/10">
+                        <div className="relative w-full h-full bg-linear-gradient-to-br from-gold-400/10 to-blue-500/10">
                           <Image
                             src={card.image}
                             alt={card.imageAlt}
@@ -302,10 +302,10 @@ export default function WhyUsSection({
                         </div>
 
                         {/* Overlay gradient on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-linear-to-t from-navy-900/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300" />
 
                         {/* Border gradient */}
-                        <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-br from-gold-400/30 via-gold-400/10 to-gold-400/5 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                        <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-linear-to-br from-gold-400/30 via-gold-400/10 to-gold-400/5 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none" />
                       </div>
                     </div>
                   </div>

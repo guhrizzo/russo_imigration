@@ -69,7 +69,7 @@ export default function Testimonials() {
               <p className="text-white/65 text-sm leading-relaxed mb-6 italic">"{t_item.text}"</p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+              <div className="flex items-center gap-3 pt-4 border-t border-white/20">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold text-navy-950 shrink-0"
                   style={{ background: 'linear-gradient(135deg, #D4A84B, #F0D080)' }}

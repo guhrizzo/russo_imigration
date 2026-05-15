@@ -12,7 +12,7 @@ export default function Footer() {
   const navItems = tRaw('footer.nav_items') as Array<{ label: string; href: string }>
 
   return (
-    <footer className="relative bg-navy-950 border-t border-white/5">
+    <footer className="relative bg-navy-950 border-t border-white/20">
       <div className="absolute top-0 left-0 right-0 gold-line" />
 
       <div className="max-w-7xl mx-auto px-6 py-16">

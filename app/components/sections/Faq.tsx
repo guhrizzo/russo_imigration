@@ -55,7 +55,7 @@ export default function FAQ() {
                             className={`group rounded-2xl border transition-all duration-500 ${
                                 openIndex === i 
                                 ? 'border-gold-400/40 bg-white/4 shadow-[0_10px_40px_-15px_rgba(212,168,75,0.1)]' 
-                                : 'border-white/5 bg-white/2 hover:border-white/20'
+                                : 'border-white/20 bg-white/2 hover:border-white/30'
                             }`}
                         >
                             <button
@@ -70,7 +70,7 @@ export default function FAQ() {
                                 </span>
 
                                 <div className={`relative flex items-center justify-center w-8 h-8 rounded-full border transition-all duration-500 ${
-                                    openIndex === i ? 'border-gold-400 bg-gold-400 rotate-45' : 'border-white/10'
+                                    openIndex === i ? 'border-gold-400 bg-gold-400 rotate-45' : 'border-white/20'
                                 }`}>
                                     <Plus size={18} className={openIndex === i ? 'text-navy-950' : 'text-gold-400'} />
                                 </div>
@@ -84,7 +84,7 @@ export default function FAQ() {
                                         exit={{ height: 0, opacity: 0 }}
                                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                                     >
-                                        <div className="px-6 pb-6 text-slate-400 leading-relaxed font-light text-base border-t border-white/5 pt-4">
+                                        <div className="px-6 pb-6 text-slate-400 leading-relaxed font-light text-base border-t border-white/20 pt-4">
                                             {faq.answer}
                                         </div>
                                     </motion.div>
@@ -100,7 +100,7 @@ export default function FAQ() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className="mt-16 relative overflow-hidden rounded-3xl border border-white/10 backdrop-blur-md"
+                    className="mt-16 relative overflow-hidden rounded-3xl border border-white/20 backdrop-blur-md"
                 >
                     {/* Faixa de gradiente no topo */}
                     <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-gold-400/60 to-transparent" />

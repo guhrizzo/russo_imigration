@@ -103,7 +103,7 @@ export default function NotaryPublic() {
             </h4>
             <ul className="space-y-2">
               {(tRaw('notary.docs_list') as unknown as string[])?.map((item: string, i: number) => (
-                <li key={i} className="text-white/60 text-sm flex items-start gap-2 pb-2 border-b border-white/5 last:border-none">
+                <li key={i} className="text-white/60 text-sm flex items-start gap-2 pb-2 border-b border-white/20 last:border-none">
                   <span className="text-gold-400 mt-0.5">—</span>
                   {item}
                 </li>
@@ -118,7 +118,7 @@ export default function NotaryPublic() {
             </h4>
             <ul className="space-y-2">
               {(tRaw('notary.why_list') as unknown as string[])?.map((item: string, i: number) => (
-                <li key={i} className="text-white/60 text-sm flex items-start gap-2 pb-2 border-b border-white/5 last:border-none">
+                <li key={i} className="text-white/60 text-sm flex items-start gap-2 pb-2 border-b border-white/20 last:border-none">
                   <span className="text-gold-400 mt-0.5">—</span>
                   {item}
                 </li>

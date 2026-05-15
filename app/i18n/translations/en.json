@@ -83,32 +83,13 @@
           "Protected data",
           "Secure communication"
         ]
-      },
-      {
-        "title": "Speed & Efficiency",
-        "badge": null,
-        "description": "Organized processes and dedicated team to advance your case with maximum speed within legal timeframes.",
-        "features": [
-          "Deadline management",
-          "Organized process",
-          "Regular updates"
-        ]
-      },
-      {
-        "title": "Personalized Service",
-        "badge": null,
-        "description": "Each case is unique. Our team listens, understands, and cares for you with empathy, developing the best strategy for your situation.",
-        "features": [
-          "Individual consultation",
-          "Personalized strategy",
-          "Close follow-up"
-        ]
       }
     ],
     "cta_label": "Ready to start?",
     "cta_title": "We're With You at Every Step",
     "cta_description": "Contact us today and discover how we can help you build a new future in the United States.",
-    "cta_button": "Contact Us Today"
+    "cta_button": "Contact Us Today",
+    "learn_more": "Learn More"
   },
   "why_us": {
     "section_label": "Our Difference",

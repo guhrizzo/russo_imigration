@@ -20,10 +20,10 @@ export default function Navbar() {
   const navLinks = [
     { label: t('navbar.inicio'), href: '#inicio' },
     { label: t('navbar.sobre'), href: '#sobre' },
-    { label: t('navbar.servicos'), href: '#servicos' },
-    { label: t('navbar.notary'), href: '#notary' },
     { label: t('navbar.por_que_nos'), href: '#por-que-nos' },
+    { label: t('navbar.servicos'), href: '#servicos' },
     { label: t('navbar.depoimentos'), href: '#depoimentos' },
+    { label: t('navbar.notary'), href: '#notary' },
     { label: t('navbar.faq'), href: '#faq' },
     { label: t('navbar.contato'), href: '#contato' },
   ]
