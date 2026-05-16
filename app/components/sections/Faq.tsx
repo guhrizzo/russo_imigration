@@ -1,23 +1,38 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Plus } from 'lucide-react'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
 export default function FAQ() {
     const { t, tRaw } = useLanguage()
     const [openIndex, setOpenIndex] = useState<number | null>(null)
+    const sectionRef = useRef<HTMLElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) entry.target.classList.add('visible')
+                })
+            },
+            { threshold: 0.1 }
+        )
+        const elements = sectionRef.current?.querySelectorAll('.animate-on-scroll')
+        elements?.forEach((el) => observer.observe(el))
+        return () => observer.disconnect()
+    }, [])
 
     const faqs = (tRaw('faq.faqs') as unknown as any[])
 
     return (
-        <section className="relative bg-white py-20 px-6">
+        <section ref={sectionRef} className="relative bg-white py-20 px-6">
             <div className="max-w-7xl mx-auto">
                 {/* Grid 2 colunas */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                     
                     {/* ESQUERDA - Título e Imagem */}
-                    <div className="space-y-8">
+                    <div className="animate-on-scroll space-y-8">
                         {/* Label */}
                         <div className="text-sm font-semibold text-slate-600 tracking-wide uppercase">
                             {t('faq.section_label')}
@@ -30,7 +45,7 @@ export default function FAQ() {
                     </div>
 
                     {/* DIREITA - FAQ Items */}
-                    <div className="space-y-4">
+                    <div className="animate-on-scroll space-y-4">
                         {faqs.map((faq: any, i: number) => (
                             <div key={i} className={`border-b border-slate-200 pb-4 last:border-b-0 overflow-hidden transition-all duration-500 ease-in-out`}>
                                 <button

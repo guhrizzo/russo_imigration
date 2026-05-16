@@ -70,16 +70,16 @@ export default function WhatsAppFloat() {
         <button
           onClick={scrollToTop}
           aria-label="Voltar ao topo"
-          className="scroll-btn w-14 h-14 rounded-full flex items-center justify-center shadow-2xl cursor-pointer"
+          className="scroll-btn w-14 h-14 rounded-full flex items-center justify-center shadow-2xl cursor-pointer hover:shadow-[#d4af37]/30"
           style={{
-            background: 'linear-gradient(135deg, #D4A84B 0%, #F0D080 100%)',
+            background: '#d4af37',
             opacity: showScrollTop ? 1 : 0,
             transform: `${showScrollTop ? 'translateY(0)' : 'translateY(8px)'} var(--scroll-scale, scale(1))`,
             pointerEvents: showScrollTop ? 'auto' : 'none',
-            transition: mounted ? 'opacity 0.3s ease, transform 0.3s ease' : 'none',
+            transition: mounted ? 'opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease' : 'none',
           }}
         >
-          <ArrowUp size={24} color="#050D1F" strokeWidth={2.5} />
+          <ArrowUp size={24} color="#3d546b" strokeWidth={2.5} />
         </button>
       </div>
     </>

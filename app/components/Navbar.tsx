@@ -41,8 +41,8 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav - centered */}
-        <nav className="hidden lg:flex items-center gap-8 flex-1 justify-center">
-          {navLinks.slice(0, 5).map((link) => (
+        <nav className="hidden lg:flex flex-wrap items-center gap-4 xl:gap-6 flex-1 justify-center">
+          {navLinks.map((link) => (
             <a 
               key={link.href}
               href={link.href}
@@ -62,7 +62,7 @@ export default function Navbar() {
             aria-label="Ligue para nós"
           >
             <Phone size={16} className="shrink-0 text-[#d4af37]" />
-            +1 (888) 671-5288
+            +1 (689) 351-0277
           </a>
 
           {/* CTA Button */}
@@ -81,7 +81,7 @@ export default function Navbar() {
               <button
                 key={f.lang}
                 onClick={() => setLanguage(f.lang)}
-                className={`text-lg transition-all duration-200 ${language === f.lang ? 'scale-125' : 'opacity-60 hover:opacity-100'}`}
+                className={`cursor-pointer text-lg transition-all duration-200 ${language === f.lang ? 'scale-125' : 'opacity-60 hover:opacity-100'}`}
                 aria-label={`Mudar para ${f.label}`}
                 title={f.label}
               >
@@ -125,7 +125,7 @@ export default function Navbar() {
               aria-label="Ligue para nós"
             >
               <Phone size={16} className="shrink-0 text-[#d4af37]" />
-              +1 (888) 671-5288
+              +1 (689) 351-0277
             </a>
 
             {/* CTA mobile */}
@@ -148,7 +148,7 @@ export default function Navbar() {
                   setLanguage(f.lang)
                   setMenuOpen(false)
                 }}
-                className={`text-xl transition-all ${language === f.lang ? 'scale-125' : 'opacity-60'}`}
+                className={`cursor-pointer text-xl transition-all ${language === f.lang ? 'scale-125' : 'opacity-60'}`}
                 aria-label={`Mudar para ${f.label}`}
                 title={f.label}
               >
