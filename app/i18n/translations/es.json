@@ -33,7 +33,7 @@
     "partner_title": "Tu Socio en Tu Viaje a Estados Unidos",
     "text1": "Russo Immigration es una asesoría especializada en ayudar a personas a conquistar el sueño de vivir legalmente en EE.UU. Nuestro equipo, formado por profesionales que conocen de cerca los desafíos del proceso migratorio, está comprometido en ser tu socio en cada etapa del camino.",
     "text2": "En poco tiempo, hemos tenido la alegría de ayudar a más de 500 personas a dar un paso decisivo hacia una nueva vida en Estados Unidos. Para nosotros, cada persona es única — por eso ofrecemos atención personalizada, totalmente enfocada en tus necesidades reales.",
-    "text3": "Si estás listo para dar el primer paso hacia una vida más tranquila y segura en América, puedes contar con Russo Immigration. Somos una asesoría de inmigración. **We are not a law firm.**",
+    "text3": "Si estás listo para dar el primer paso hacia una vida más tranquila y segura en América, puedes contar con Russo Immigration. Somos una asesoría de inmigración. We are not a law firm.",
     "tags": [
       "Confidencial",
       "Eficiente",
@@ -239,6 +239,7 @@
     "speak_with_us": "Contactanos",
     "cta_description": "¿Listo para dar el primer paso? Nuestro equipo está disponible para orientarte.",
     "whatsapp": "WhatsApp",
+    "back_to_top": "Volver al Inicio",
     "copyright": "© {year} Russo Immigration llc. Todos los derechos reservados.",
     "developed_by": "Desarrollado por",
     "nav_items": [

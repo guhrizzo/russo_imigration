@@ -16,17 +16,17 @@ export default function About() {
 
   const values = [
     {
-      icon: <Target size={24} />,
+      icon: <Target size={20} />,
       title: t('about.mission'),
       text: t('about.mission_text'),
     },
     {
-      icon: <Eye size={24} />,
+      icon: <Eye size={20} />,
       title: t('about.vision'),
       text: t('about.vision_text'),
     },
     {
-      icon: <Heart size={24} />,
+      icon: <Heart size={20} />,
       title: t('about.values'),
       text: t('about.values_text'),
     },
@@ -49,97 +49,70 @@ export default function About() {
   }, [])
 
   return (
-    <section id="sobre" ref={sectionRef} className="relative py-28 overflow-hidden bg-white">
-      {/* Background */}
-      <div className="absolute inset-0 bg-white" />
-
+    <section id="sobre" ref={sectionRef} className="relative py-24 overflow-hidden bg-[#25466e]">
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Section header */}
-        <div className="animate-on-scroll text-center mb-20">
-          <p className="text-divus-yellow text-xs tracking-[0.3em] uppercase font-medium mb-4">{t('about.section_label')}</p>
-          <h2 className="font-jakarta text-4xl md:text-5xl text-divus-yellow font-bold mb-6">
-            {t('about.title')}
-          </h2>
-          <p className="max-w-2xl mx-auto text-divus-darklime text-lg leading-relaxed font-light">
-            {t('about.description')}
-          </p>
+        
+        {/* Top banner image */}
+        <div className="animate-on-scroll mb-16 rounded-2xl overflow-hidden h-64 border border-white/10 max-w-7xl mx-auto">
+          <img
+            src="/usa.jpg"
+            alt="Divus Legal Group"
+            className="w-full h-full object-cover"
+          />
         </div>
 
-        {/* Two-column layout */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-          {/* Left: visual */}
-          <div className="animate-on-scroll relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-4/5 bg-gradient-to-br from-divus-blue to-divus-blue-light flex items-center justify-center border border-divus-yellow/20">
-              {/* Placeholder visual - replace with actual image */}
-              <div className="absolute inset-0" style={{
-                background: 'linear-gradient(135deg, rgba(30,53,35,0.95) 0%, rgba(38,75,56,0.8) 100%)'
-              }} />
-
-              {/* Decorative elements inside the card */}
-              <div className="relative z-10 text-center p-12">
-                <img
-                  src="/logo-russo-imigration.png"
-                  alt="Russo Immigration"
-                  className="h-64 w-auto object-contain mx-auto mb-6"
-                />
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-divus-yellow/50 to-transparent mb-8" />
-                <p className="text-divus-darklime text-sm italic font-instrument">
-                  "{t('about.section_label')}<br />{t('hero.tagline')}"
-                </p>
-              </div>
-
-              {/* Divus yellow corner accents */}
-              <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-divus-yellow/60" />
-              <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-divus-yellow/60" />
-              <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-divus-yellow/60" />
-              <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-divus-yellow/60" />
+        {/* Main content - 2 columns */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          
+          {/* Left column - Text */}
+          <div className="animate-on-scroll space-y-8">
+            <div className="space-y-4">
+              <h2 className="font-jakarta text-4xl lg:text-5xl text-white font-bold leading-tight">
+                {t('about.title')}
+              </h2>
+              <p className="text-white/70 text-base leading-relaxed">
+                {t('about.description')}
+              </p>
             </div>
 
-            {/* Floating stats card */}
-            <div className="absolute -bottom-6 -right-6 bg-divus-blue/90 backdrop-blur-md rounded-lg p-5 border border-divus-yellow/30 shadow-2xl shadow-divus-yellow/20">
-              <div className="text-3xl font-jakarta font-bold text-divus-yellow mb-1">500+</div>
-              <div className="text-divus-darklime text-sm">{t('about.transformed_lives')}</div>
+            <div className="space-y-5 text-white/70 text-sm leading-relaxed">
+              <p>
+                {t('about.text1')}
+              </p>
+              <p>
+                {t('about.text2')}
+              </p>
+              <p>
+                {t('about.text3')}
+              </p>
             </div>
+
+
           </div>
 
-          {/* Right: text */}
-          <div className="animate-on-scroll">
-            <h3 className="font-jakarta text-3xl text-divus-yellow font-semibold mb-6">
-              {t('about.partner_title')}
-            </h3>
-            <div className="space-y-5 text-divus-darklime leading-relaxed">
-              <p>{t('about.text1')}</p>
-              <p>{t('about.text2')}</p>
-              <p>{renderBold(t('about.text3'))}</p>
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              {(tRaw('about.tags') as unknown as string[])?.map((tag: string) => (
-                <span
-                  key={tag}
-                  className="px-4 py-2 rounded-lg text-xs tracking-widest uppercase border border-divus-yellow/40 text-divus-yellow font-medium bg-divus-yellow/5"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Mission / Vision / Values */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {values.map((item, i) => (
-            <div
-              key={i}
-              className="animate-on-scroll bg-gradient-to-br from-divus-blue to-divus-blue-light rounded-lg p-8 hover:border-divus-yellow/60 transition-all group border border-divus-yellow/20 hover:shadow-lg hover:shadow-divus-yellow/20"
-            >
-              <div className="w-14 h-14 rounded-lg mb-5 group-hover:bg-divus-yellow/20 transition-colors text-divus-yellow flex items-center justify-center bg-divus-yellow/10">
-                {item.icon}
+          {/* Right column - Cards stacked */}
+          <div className="space-y-4">
+            {values.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll bg-[#1a2f45]/80 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white/70 shrink-0">
+                    {item.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-jakarta text-white font-semibold mb-2 text-base">
+                      {item.title}
+                    </h4>
+                    <p className="text-white/70 text-sm leading-relaxed">
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h4 className="font-jakarta text-lg text-divus-white font-semibold mb-3">{item.title}</h4>
-              <p className="text-divus-darklime text-sm leading-relaxed">{item.text}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

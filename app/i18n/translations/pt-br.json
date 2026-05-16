@@ -33,7 +33,7 @@
     "partner_title": "Seu Parceiro na Jornada para os EUA",
     "text1": "A Russo Immigration é uma assessoria especializada em ajudar pessoas a conquistar o sonho de viver legalmente nos EUA. Nosso time, formado por profissionais que conhecem de perto os desafios do processo imigratório, está comprometido em ser seu parceiro em cada etapa da jornada: do primeiro contato até a conclusão do seu processo.",
     "text2": "Em pouco tempo, tivemos a alegria de ajudar mais de 500 pessoas a dar um passo decisivo rumo a uma nova vida nos Estados Unidos. Para nós, cada pessoa é única. Por isso, oferecemos atendimento personalizado, totalmente focado nas suas necessidades reais.",
-    "text3": "Se você está pronto para dar o primeiro passo em direção a uma vida mais tranquila e segura na América, pode contar com a Russo Immigration. Somos uma assessoria de imigração. **We are not a law firm.**",
+    "text3": "Se você está pronto para dar o primeiro passo em direção a uma vida mais tranquila e segura na América, pode contar com a Russo Immigration. Somos uma assessoria de imigração. We are not a law firm.",
     "tags": [
       "Confidencial",
       "Eficiente",
@@ -239,6 +239,7 @@
     "speak_with_us": "Fale Conosco",
     "cta_description": "Pronto para dar o primeiro passo? Nossa equipe está disponível para orientar você.",
     "whatsapp": "WhatsApp",
+    "back_to_top": "Voltar ao Topo",
     "copyright": "© {year} Russo Immigration llc. Todos os direitos reservados.",
     "developed_by": "Desenvolvido por",
     "nav_items": [
