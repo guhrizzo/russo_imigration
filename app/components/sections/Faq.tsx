@@ -26,7 +26,7 @@ export default function FAQ() {
     const faqs = (tRaw('faq.faqs') as unknown as any[])
 
     return (
-        <section ref={sectionRef} className="relative bg-white py-20 px-6">
+        <section id="faq" ref={sectionRef} className="relative bg-white py-20 px-6">
             <div className="max-w-7xl mx-auto">
                 {/* Grid 2 colunas */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
