@@ -77,13 +77,13 @@ export default function About() {
 
             <div className="space-y-5 text-white/70 text-sm leading-relaxed">
               <p>
-                {t('about.text1')}
+                {renderBold(t('about.text1') as string)}
               </p>
               <p>
-                {t('about.text2')}
+                {renderBold(t('about.text2') as string)}
               </p>
               <p>
-                {t('about.text3')}
+                {renderBold(t('about.text3') as string)}
               </p>
             </div>
 

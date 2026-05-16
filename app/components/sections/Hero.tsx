@@ -93,11 +93,16 @@ export default function Hero() {
             {t('hero.tagline')}
           </div>
 
+          {/* Welcome */}
+          <div className="animate-on-scroll text-xl sm:text-2xl font-light text-white/90">
+            {t('hero.welcome')}
+          </div>
+
           {/* Title */}
           <h1 className="animate-on-scroll font-jakarta text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.2] space-y-2">
-            <div>Consultoria Estratégica para</div>
+            <div>{t('hero.title')}</div>
             <div>
-              <span className="italic text-white/90">sua Imigração Legal nos Estados Unidos</span>
+              <span className="italic text-white/90">{t('hero.title_highlight')}</span>
             </div>
           </h1>
 
@@ -107,15 +112,15 @@ export default function Hero() {
           </p>
 
           {/* CTA Button */}
-          <div className="animate-on-scroll flex items-center gap-3">
+          <div className="animate-on-scroll flex items-center gap-3 mt-4">
             <a
               href={`https://wa.me/16893510277?text=${WA_MESSAGE}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full bg-[#2c4a7c] text-white font-semibold text-base flex items-center gap-3 hover:bg-[#3d5a8c] transition-all duration-300 border border-[#3d5a8c] hover:shadow-lg"
+              className="w-full sm:w-auto px-6 sm:px-8 py-4 rounded-full bg-[#2c4a7c] text-white font-semibold text-sm sm:text-base flex items-center justify-center gap-3 hover:bg-[#3d5a8c] transition-all duration-300 border border-[#3d5a8c] hover:shadow-lg text-center"
             >
-              Quero fazer uma consulta gratuita
-              <span className="text-[#d4af37]">
+              <span>Quero fazer uma consulta gratuita</span>
+              <span className="text-[#d4af37] shrink-0">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>

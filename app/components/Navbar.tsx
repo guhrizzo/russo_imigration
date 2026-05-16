@@ -29,14 +29,14 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#25466e] border-b border-[#2a3f52]">
-      <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between gap-8 h-16">
+      <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between lg:gap-8 h-24 lg:h-16 relative">
 
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity">
+        <a href="#inicio" className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity">
           <img
             src="/logo-russo-imigration.png"
             alt="Russo Immigration"
-            className="h-16 w-auto object-contain"
+            className="h-20 lg:h-16 w-auto object-contain"
           />
         </a>
 
@@ -46,7 +46,7 @@ export default function Navbar() {
             <a 
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+              className="text-sm font-medium text-white/80 hover:text-white transition-colors whitespace-nowrap"
             >
               {link.label}
             </a>
@@ -93,11 +93,11 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-[#d4af37] hover:text-white transition-colors"
+          className="lg:hidden text-[#d4af37] hover:text-white transition-colors absolute right-6"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
