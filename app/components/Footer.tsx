@@ -1,5 +1,6 @@
 'use client'
 
+import { FiInstagram } from 'react-icons/fi'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
 export default function Footer() {
@@ -15,13 +16,23 @@ export default function Footer() {
         {/* Main content */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 mb-12">
           
-          {/* Left - Logo */}
-          <div className="shrink-0">
+          {/* Left - Logo and Social */}
+          <div className="flex flex-col items-start gap-4 shrink-0">
             <img
               src="/logo-russo-imigration.png"
               alt="Russo Immigration"
               className="h-24 w-auto object-contain"
             />
+            {/* Social - Instagram */}
+            <a
+              href="https://www.instagram.com/russoimmigration?igsh=MWFpZHcwbmI2eTVtcQ%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white transition-colors duration-200 pl-9"
+              aria-label="Russo Immigration Instagram"
+            >
+              <FiInstagram size={24} />
+            </a>
           </div>
 
           {/* Right - Navigation */}

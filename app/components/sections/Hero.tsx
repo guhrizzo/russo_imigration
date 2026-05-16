@@ -87,12 +87,6 @@ export default function Hero() {
         {/* Left side - Text content */}
         <div className="w-full lg:w-1/2 space-y-8">
           
-          {/* Tagline */}
-          <div className="animate-on-scroll inline-flex items-center gap-2 text-white/80 text-sm font-medium uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-[#d4af37]"></span>
-            {t('hero.tagline')}
-          </div>
-
           {/* Welcome */}
           <div className="animate-on-scroll text-xl sm:text-2xl font-light text-white/90">
             {t('hero.welcome')}
