@@ -61,7 +61,7 @@ export default function NotaryPublic() {
             <div className="space-y-4 mb-10">
               {whyList.map((item: string, i: number) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
                     <Check size={16} className="text-blue-600" />
                   </div>
                   <span className="text-[#111827] text-base leading-relaxed">{item}</span>
@@ -87,11 +87,11 @@ export default function NotaryPublic() {
               {t('notary.docs_title') || 'Documentos Aceitos'}
             </h3>
 
-            <div className="space-y-4 flex-grow">
+            <div className="space-y-4 grow">
               {docsList.map((item: string, i: number) => (
                 <div key={i} className="flex items-center gap-3 pb-4 border-b border-[#e5e7eb] last:border-none">
                   <svg
-                    className="w-5 h-5 text-blue-600 flex-shrink-0"
+                    className="w-5 h-5 text-blue-600 shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
