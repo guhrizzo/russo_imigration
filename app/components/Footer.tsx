@@ -1,12 +1,10 @@
 'use client'
-
 import { FiInstagram } from 'react-icons/fi'
 import { useLanguage } from '@/app/i18n/LanguageContext'
 
 export default function Footer() {
   const year = new Date().getFullYear()
   const { t, tRaw } = useLanguage()
-
   const navItems = tRaw('footer.nav_items') as Array<{ label: string; href: string }>
 
   return (
@@ -14,10 +12,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         
         {/* Main content */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 mb-12">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-12 mb-12">
           
           {/* Left - Logo and Social */}
-          <div className="flex flex-col items-start gap-4 shrink-0">
+          <div className="flex flex-col items-center lg:items-start gap-4 shrink-0">
             <img
               src="/logo-russo-imigration.png"
               alt="Russo Immigration"
@@ -28,7 +26,7 @@ export default function Footer() {
               href="https://www.instagram.com/russoimmigration?igsh=MWFpZHcwbmI2eTVtcQ%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors duration-200 pl-9"
+              className="text-white/60 hover:text-white transition-colors duration-200"
               aria-label="Russo Immigration Instagram"
             >
               <FiInstagram size={24} />
@@ -36,8 +34,8 @@ export default function Footer() {
           </div>
 
           {/* Right - Navigation */}
-          <nav className="flex-1">
-            <ul className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
+          <nav className="w-full lg:w-auto flex-1">
+            <ul className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8 items-center lg:items-start">
               {navItems.map((link) => (
                 <li key={link.href}>
                   <a
@@ -53,8 +51,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10">
-          <div className="flex flex-col sm:flex-row items-center gap-2 text-white/40 text-xs">
+        <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-white/10">
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-2 text-white/40 text-xs">
             <p>
               {t('footer.copyright').replace('{year}', year.toString())}
             </p>
