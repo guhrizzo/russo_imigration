@@ -22,7 +22,9 @@ export default function PageContent() {
       <WhyUs />
       <Services />
       <Testimonials />
+      {/*
       <NotaryPublic />
+      */}
       <Faq />
       <Contact />
       <Footer />

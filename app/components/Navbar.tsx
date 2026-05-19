@@ -19,24 +19,24 @@ export default function Navbar() {
   const navLinks = [
     { label: t('navbar.inicio'), href: '#inicio' },
     { label: t('navbar.sobre'), href: '#sobre' },
-    { label: t('navbar.por_que_nos'), href: '#por-que-nos' },
+    //{ label: t('navbar.por_que_nos'), href: '#por-que-nos' },
     { label: t('navbar.servicos'), href: '#servicos' },
     { label: t('navbar.depoimentos'), href: '#depoimentos' },
-    { label: t('navbar.notary'), href: '#notary' },
-    { label: t('navbar.faq'), href: '#faq' },
+    //{ label: t('navbar.notary'), href: '#notary' },
+    //{ label: t('navbar.faq'), href: '#faq' },
     { label: t('navbar.contato'), href: '#contato' },
   ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#25466e] border-b border-[#2a3f52]">
-      <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between lg:gap-8 h-24 lg:h-16 relative">
+      <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between lg:gap-8 h-24 lg:h-22 relative">
 
         {/* Logo */}
         <a href="#inicio" className="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity">
           <img
             src="/logo-russo-imigration.png"
             alt="Russo Immigration"
-            className="h-20 lg:h-16 w-auto object-contain"
+            className="h-20 lg:h-22 w-auto object-contain"
           />
         </a>
 
