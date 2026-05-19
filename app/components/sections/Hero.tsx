@@ -89,7 +89,7 @@ export default function Hero() {
           
           {/* Welcome */}
           <div className="animate-on-scroll text-xl sm:text-2xl font-light text-white/90">
-            {t('hero.welcome')}
+            {t('hero.tagline')}
           </div>
 
           {/* Title */}
