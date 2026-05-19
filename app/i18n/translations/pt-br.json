@@ -55,24 +55,57 @@
     "description": "Oferecemos assessoria completa em imigração, com estratégias eficazes e atendimento humanizado para cada etapa da sua jornada.",
     "services": [
       {
-        "title": "Taxa Anual de Asilo",
+        "title": "Regularização Imigratória nos EUA",
         "badge": "Destaque",
-        "description": "Assessoria completa para o processo de asilo nos EUA. Cuidamos de toda a documentação, prazos e estratégias para maximizar suas chances de aprovação.",
+        "description": "Assessoria completa em regularização imigratória com estratégias eficazes e atendimento humanizado. Ajudamos você a conquistar seu status legal de forma segura e eficiente.",
         "features": [
-          "Análise do caso",
-          "Preparação de documentos",
-          "Acompanhamento de audiências",
-          "Suporte contínuo"
+          "Ajuste de status",
+          "Processos de Green Card",
+          "Renovação de vistos",
+          "Work Permit (autorização de trabalho)"
         ]
       },
       {
-        "title": "Vistos & Green Card",
+        "title": "Vistos de Imigração e Trabalho",
         "badge": null,
-        "description": "Orientação especializada para pedidos de vistos de trabalho, família e residência permanente nos Estados Unidos.",
+        "description": "Orientação especializada em vistos de trabalho e imigração para aproveitar oportunidades nos Estados Unidos.",
         "features": [
-          "Visto de trabalho",
-          "Reunificação familiar",
-          "Residência permanente"
+          "Vistos religiosos",
+          "EB-1 (Habilidades extraordinárias)",
+          "EB-2 (Profissionais especializados)",
+          "EB-3 (Trabalhadores qualificados)",
+          "H-1B (Especialistas temporários)",
+          "L-1 (Transferência intraempresa)"
+        ]
+      },
+      {
+        "title": "Vistos de Estudo e Investimento",
+        "badge": null,
+        "description": "Assessoria para quem deseja estudar ou investir nos EUA, com suporte completo em toda a documentação.",
+        "features": [
+          "F-1 (Visto de estudante)",
+          "EB-5 (Investimento e emprego)",
+          "E-2 (Visto de investimento)"
+        ]
+      },
+      {
+        "title": "Casos Humanitários e Especiais",
+        "badge": null,
+        "description": "Atendimento especializado em processos humanitários e proteção para situações especiais que exigem abordagem personalizada.",
+        "features": [
+          "Asilo político",
+          "VAWA (violência doméstica)",
+          "SIJ (menor imigrante especial)"
+        ]
+      },
+      {
+        "title": "Consultoria Personalizada",
+        "badge": null,
+        "description": "Cada caso é único. Oferecemos consultoria estratégica focada em suas necessidades específicas com acompanhamento do início ao fim.",
+        "features": [
+          "Avaliação do perfil do cliente",
+          "Estratégia migratória personalizada",
+          "Acompanhamento completo do processo"
         ]
       },
       {

@@ -55,24 +55,57 @@
     "description": "Ofrecemos asesoramiento completo en inmigración con estrategias efectivas y atención humanizada para cada etapa de tu viaje.",
     "services": [
       {
-        "title": "Presentación Anual de Asilo",
+        "title": "Regularización Migratoria en EE.UU.",
         "badge": "Destacado",
-        "description": "Apoyo completo para el proceso de asilo en EE.UU. Nos encargamos de toda la documentación, plazos y estrategias para maximizar tus posibilidades de aprobación.",
+        "description": "Apoyo completo en regularización migratoria con estrategias efectivas y atención humanizada. Te ayudamos a conquistar tu estatus legal de forma segura y eficiente.",
         "features": [
-          "Análisis del caso",
-          "Preparación de documentos",
-          "Acompañamiento en audiencias",
-          "Apoyo continuo"
+          "Ajuste de estatus",
+          "Procesos de Tarjeta Verde",
+          "Renovación de visas",
+          "Permiso de Trabajo (autorización de empleo)"
         ]
       },
       {
-        "title": "Visas y Tarjeta Verde",
+        "title": "Visas de Inmigración y Trabajo",
         "badge": null,
-        "description": "Orientación especializada para solicitudes de visa de trabajo, familia y residencia permanente en Estados Unidos.",
+        "description": "Orientación especializada en visas de trabajo e inmigración para aprovechar oportunidades en Estados Unidos.",
         "features": [
-          "Visa de trabajo",
-          "Reunificación familiar",
-          "Residencia permanente"
+          "Visas religiosas",
+          "EB-1 (Habilidades extraordinarias)",
+          "EB-2 (Profesionales especializados)",
+          "EB-3 (Trabajadores calificados)",
+          "H-1B (Especialistas temporales)",
+          "L-1 (Transferencia dentro de la empresa)"
+        ]
+      },
+      {
+        "title": "Visas de Estudio e Inversión",
+        "badge": null,
+        "description": "Apoyo completo para quienes desean estudiar o invertir en EE.UU., con asistencia en toda la documentación.",
+        "features": [
+          "F-1 (Visa de estudiante)",
+          "EB-5 (Inversión y empleo)",
+          "E-2 (Visa de inversión)"
+        ]
+      },
+      {
+        "title": "Casos Humanitarios y Especiales",
+        "badge": null,
+        "description": "Asistencia especializada en procesos humanitarios y protección para situaciones especiales que requieren enfoque personalizado.",
+        "features": [
+          "Asilo político",
+          "VAWA (violencia doméstica)",
+          "SIJ (Estatus de Joven Inmigrante Especial)"
+        ]
+      },
+      {
+        "title": "Asesoramiento Personalizado",
+        "badge": null,
+        "description": "Cada caso es único. Ofrecemos asesoramiento estratégico enfocado en tus necesidades específicas con seguimiento de inicio a fin.",
+        "features": [
+          "Evaluación del perfil del cliente",
+          "Estrategia migratoria personalizada",
+          "Seguimiento completo del proceso"
         ]
       },
       {

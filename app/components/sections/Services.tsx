@@ -43,7 +43,7 @@ export default function Services({
       const servicesData = tRaw('services.services') as any[]
       if (!servicesData || !Array.isArray(servicesData)) return []
 
-      const images = ['/img-05.png', '/img-06.png', '/img-07.png']
+      const images = ['/img-03.png', '/img-02.png', '/img-04.png', '/img-05.png', '/img-06.png', '/img-07.png']
 
       return servicesData.map((service: any, index: number) => ({
         id: `service-card-${index}`,
@@ -146,15 +146,13 @@ export default function Services({
               <div
                 key={card.id}
                 data-card-id={card.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 items-center gap-8 transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 items-center gap-8 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
               >
                 {/* Card branco com conteúdo */}
                 <div
-                  className={`bg-white rounded-2xl p-8 lg:p-10 flex flex-col justify-between gap-6 h-full ${
-                    isImageLeft ? 'lg:order-2' : 'lg:order-1'
-                  }`}
+                  className={`bg-white rounded-2xl p-8 lg:p-10 flex flex-col justify-between gap-6 h-full ${isImageLeft ? 'lg:order-2' : 'lg:order-1'
+                    }`}
                 >
                   <div className="space-y-4">
                     <p className="text-[#25466e]/40 text-xs tracking-[0.2em] font-medium">
@@ -167,6 +165,16 @@ export default function Services({
                       <p className="text-[#25466e]/60 text-sm leading-relaxed">
                         {card.description}
                       </p>
+                    )}
+                    {card.features && card.features.length > 0 && (  // <-- adiciona aqui
+                      <ul className="space-y-1.5 pt-1">
+                        {card.features.map((feature, i) => (
+                          <li key={i} className="flex items-center gap-2 text-sm text-[#25466e]/70">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#D4A84B] shrink-0" />
+                            {typeof feature === 'string' ? feature : feature.title}
+                          </li>
+                        ))}
+                      </ul>
                     )}
                   </div>
 
@@ -184,9 +192,8 @@ export default function Services({
 
                 {/* Imagem separada */}
                 <div
-                  className={`relative rounded-xl overflow-hidden h-80 w-full ${
-                    isImageLeft ? 'lg:order-1' : 'lg:order-2'
-                  }`}
+                  className={`relative rounded-xl overflow-hidden min-h-80 h-full w-full ${isImageLeft ? 'lg:order-1' : 'lg:order-2'
+                    }`}
                 >
                   <Image
                     src={card.image}

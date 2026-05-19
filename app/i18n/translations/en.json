@@ -55,24 +55,57 @@
     "description": "We offer complete immigration advice with effective strategies and humanized service for every stage of your journey.",
     "services": [
       {
-        "title": "Annual Asylum Filing",
+        "title": "USA Immigration Regularization",
         "badge": "Featured",
-        "description": "Complete support for the asylum process in the USA. We handle all documentation, deadlines, and strategies to maximize your approval chances.",
+        "description": "Complete immigration regularization support with effective strategies and humanized care. We help you achieve your legal status safely and efficiently.",
         "features": [
-          "Case analysis",
-          "Document preparation",
-          "Hearing accompaniment",
-          "Continuous support"
+          "Status adjustment",
+          "Green Card processes",
+          "Visa renewal",
+          "Work Permit (employment authorization)"
         ]
       },
       {
-        "title": "Visas & Green Card",
+        "title": "Immigration & Work Visas",
         "badge": null,
-        "description": "Expert guidance for work visa, family, and permanent residency applications in the United States.",
+        "description": "Expert guidance on work and immigration visas to seize opportunities in the United States.",
         "features": [
-          "Work visa",
-          "Family reunification",
-          "Permanent residency"
+          "Religious visas",
+          "EB-1 (Extraordinary ability)",
+          "EB-2 (Specialized professionals)",
+          "EB-3 (Skilled workers)",
+          "H-1B (Temporary specialists)",
+          "L-1 (Intra-company transfer)"
+        ]
+      },
+      {
+        "title": "Study & Investment Visas",
+        "badge": null,
+        "description": "Complete support for those who wish to study or invest in the USA, with full documentation assistance.",
+        "features": [
+          "F-1 (Student visa)",
+          "EB-5 (Investment and employment)",
+          "E-2 (Investment visa)"
+        ]
+      },
+      {
+        "title": "Humanitarian & Special Cases",
+        "badge": null,
+        "description": "Specialized assistance in humanitarian processes and protection for special situations requiring personalized approach.",
+        "features": [
+          "Political asylum",
+          "VAWA (domestic violence)",
+          "SIJ (Special Immigrant Juvenile Status)"
+        ]
+      },
+      {
+        "title": "Personalized Consulting",
+        "badge": null,
+        "description": "Each case is unique. We offer strategic consultation focused on your specific needs with start-to-finish process monitoring.",
+        "features": [
+          "Client profile evaluation",
+          "Personalized migration strategy",
+          "Complete process monitoring"
         ]
       },
       {
